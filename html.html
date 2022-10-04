@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+	<title>Portfolio</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css.css">
+	<link rel="stylesheet" href="http://fonts.cdnfonts.com/css/montserrat">
+    <link rel="icon" type="image/png" href="img/Logo.png">
+    
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <section id="A">
+        <h5>Bonjour,</h5>
+
+        <h1>Je suis Valentin Frébourg</h1>
+        <p>Développeur Front-end</p>
+    </section>
+
+    <section id="B">
+        <h5>Compétences</h5>
+
+        <span class="sphere"></span>
+	</section>
+
+    <section id="C">
+        <h5>Parcours</h5>
+
+        <div class="parcours">
+            <div class="ligne"></div>
+
+            <div class="bloc gauche">
+                <div class="texte">
+                    <h2>2022</h2>
+                    <h2>LP UX2I (Licence Professionnelle User Experience Integration Interface)</h2>
+                    <p>Diplôme obtenu à l'IUT de Blois (Université de Tours).</p>
+                </div>
+            </div>
+
+            <div class="bloc droite">
+                <div class="texte">
+                    <h2>2021</h2>
+                    <h2>BTS SNIR (Brevet de Technicien Supérieur Systèmes Numériques option Informatique et Réseaux)</h2>
+                    <p>Diplôme obtenu au lycée Edouard Branly à Dreux.</p>
+                </div>
+            </div>
+
+            <div class="bloc gauche">
+                <div class="texte">
+                    <h2>2019</h2>
+                    <h2>Baccalauréat Scientifique</h2>
+                    <p>Diplôme obtenu au lycée Rémi Belleau à Nogent-Le-Rotrou.</p>
+                </div>
+            </div>
+        </div>
+	</section>
+
+    <section id="D">
+        <h5>Réalisations</h5>
+
+        <div class="slider">
+            <div class="box1 box">
+                <div class="bg"></div>
+                <div class="details">
+                    <h2>2022<br>Quizz</h2>
+                    <p>...</p>
+                </div>
+    
+                <div class="illustration">
+                    <div class="inner"></div>
+                </div>
+            </div>
+    
+            <div class="box2 box">
+                <div class="bg"></div>
+                <div class="details">
+                    <h2>2021<br>Chifoumi</h2>
+                    <p>...</p>
+                </div>
+    
+                <div class="illustration">
+                    <div class="inner"></div>
+                </div>
+            </div>
+    
+            <div class="box3 box">
+                <div class="bg"></div>
+                <div class="details">
+                    <h2>2022<br>Projet Centre Commercial Blois 2 - LP UX2I</h2>
+                    <p>Conception d'un site internet en équipe de 3. Le projet a pour but de diversifier la communication de la galerie marchande et de la zone commerciale Blois 2 en réalisant un site. Pour cela, il a fallu passer par plusieurs étapes : Etat des lieux, veille concurrentielle, analyse des cibles, charte graphique, communications sur les réseaux sociaux, réflexion UX, maquettage et conception du site.</p>
+                </div>
+    
+                <div class="illustration">
+                    <div class="inner"></div>
+                </div>
+            </div>
+    
+            <div class="box4 box">
+                <div class="bg"></div>
+                <div class="details">
+                    <h2>2021<br>Projet Escape Game - BTS SNIR</h2>
+                    <p>Création d'un Escape Game programmé en C++ en équipe de 4. Le projet consistait à développer une application permettant à l'entreprise de créer des scénarios à partir d'un catalogue de jeux d'énigmes. Ces jeux sont constitués de cartes ARDUINO associées à des capteurs et actionneurs.</p>
+                </div>
+    
+                <div class="illustration">
+                    <div class="inner"></div>
+                </div>
+            </div>
+    
+            <div class="box5 box">
+                <div class="bg"></div>
+                <div class="details">
+                    <h2>Décembre 2017<br>Participation d'un concours "24h pour le Net Plus Ultr@ !"</h2>
+                    <p>Réalisation de mon premier site internet en équipe de 3 sur un sujet donné. Le thème de cette année était : « De Stonehenge au télescope Hubble, en passant par la lunette de Galilée, ou quand l’humanité cherche sa place dans l’univers. »</p>
+                </div>
+    
+                <div class="illustration">
+                    <div class="inner"></div>
+                </div>
+            </div>
+        </div>
+    
+        <img src="img/fleche.png" class="fleche_gauche" style="filter: invert(1); transform: rotate(90deg);">
+        <img src="img/fleche.png" class="fleche_droite" style="filter: invert(1); transform: rotate(-90deg);">
+
+        <div class="trail">
+            <div class="box1 active">1</div>
+            <div class="box2">2</div>
+            <div class="box3">3</div>
+            <div class="box4">4</div>
+            <div class="box5">5</div>
+        </div>
+    </section>
+
+    <section id="E">
+        <h5>Contact</h5>
+        <form id="form" method="POST" action="php.php">
+            <input id="nom" type="text" name="nom" placeholder="NOM">
+            <input id="email" type="text" name="email" placeholder="E-MAIL">
+            <textarea id="message" type="text" name="message" placeholder="MESSAGE"></textarea>
+            <input id="envoyer" type="submit" value="ENVOYER">
+        </form>
+    </section>
+
+    <!-- Images => Unsplash / Flaticon -->
+
+    <script src="js.js"></script>
+</body>
+</html>

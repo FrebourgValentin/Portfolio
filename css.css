@@ -1,0 +1,497 @@
+/*
+Blanc: #fff
+Gris: #313131
+Bleu: #1c98ed
+Orange: #ff4500
+
+Agrandissement: transform: scale(1.02);
+Format Mobile: 600px 
+Format Tablette: 768px
+*/
+
+* {
+	font-family: Montserrat, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/*========================================================= */
+/*==================== TOUTES SECTIONS ==================== */
+/*========================================================= */
+
+h5 {
+    font-size: 1.2em;
+    color: #ff4500;
+    text-transform: uppercase;
+	text-align: center;
+	letter-spacing: .2em;
+	padding: 1em;
+}
+
+/*========================================================= */
+/*====================== SECTION A ======================== */
+/*========================================================= */
+
+#A {
+	background: url("img/texture.jpg") fixed;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#A h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: .5em;
+}
+
+#A p {
+    font-size: .8em;
+    color: #fff;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	text-align: center;
+}
+
+/*========================================================= */
+/*====================== SECTION B ======================== */
+/*========================================================= */
+
+#B {
+	background: white;
+}
+
+#B .tagcloud {
+	color: #313131;
+	font-weight: 500;
+	margin: auto;
+}
+
+#B .tagcloud--item:hover {
+	color: #1c98ed;
+	font-weight: 700;
+}
+
+/*========================================================= */
+/*====================== SECTION C ======================== */
+/*========================================================= */
+
+#C {
+	background: #313131;
+}
+
+#C .parcours {
+	position: relative;
+	width: 80%;
+	margin: auto;
+	padding-bottom: 2em;
+}
+
+#C .ligne {
+	position: absolute;
+	width: 6px;
+	background-color: white;
+	top: 2em;
+	bottom: 2em;
+	left: 50%;
+	margin-left: -3px;
+}
+
+#C .bloc {
+	padding: 10px 40px;
+	position: relative;
+	width: 50%;
+}
+
+#C .bloc::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: 4px solid #1c98ed;
+	top: 15px;
+	border-radius: 100%;
+	z-index: 1;
+}
+
+#C .droite {
+	left: 50%;
+}
+
+#C .gauche::before {
+	content: " ";
+	position: absolute;
+	top: 22px;
+	width: 0;
+	right: 30px;
+	border: medium solid white;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent white;
+}
+
+#C .droite::before {
+	content: " ";
+	position: absolute;
+	top: 22px;
+	width: 0;
+	left: 30px;
+	border: medium solid white;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent white transparent transparent;
+}
+
+#C .droite::after {
+	left: -16px;
+}
+
+#C .texte {
+	padding: 20px;
+	background-color: white;
+	position: relative;
+	border-radius: .8em;
+}
+
+#C h2 {
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+
+@media screen and (max-width: 600px) {
+	#C .ligne {
+		left: 31px;
+	}
+
+	#C .bloc {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	}
+
+	#C .bloc::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+
+	#C .gauche::after, #C .droite::after {
+		left: 15px;
+	}
+
+	#C .droite {
+		left: 0;
+	}
+}
+
+/*========================================================= */
+/*====================== SECTION D ======================== */
+/*========================================================= */
+
+#D {
+	background: #313131;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+#D .slider {
+	display: flex;
+	width: 500%;
+	height: 50rem;
+	transition: all 0.25s ease-in;
+	transform: translateX(0);
+}
+
+@media only screen and (max-width: 1000px) {
+	#D .slider {
+		height: 100vh;
+	}
+}
+
+#D .slider .box {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+}
+
+@media only screen and (max-width: 650px) {
+	#D .slider .box {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+}
+
+#D .slider .box .bg {
+	padding: 2rem;
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 55%;
+	transform: skewX(7deg);
+	position: absolute;
+	height: 100%;
+	left: -10%;
+	padding-left: 20rem;
+	transform-origin: 0 100%;
+}
+
+@media only screen and (max-width: 800px) {
+	#D .slider .box .bg {
+		width: 65%;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	#D .slider .box .bg {
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		height: 54%;
+		transform: skewX(0deg);
+	}
+}
+
+#D .slider .box .bg::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: inherit;
+	pointer-events: none;
+	transform: skewX(10deg);
+}
+
+@media only screen and (max-width: 650px) {
+	#D .slider .box .bg::before {
+		width: 120%;
+		bottom: 0;
+		transform: skewX(0deg);
+	}
+}
+
+#D .slider .box .details {
+	padding: 5rem;
+	padding-left: 10rem;
+	z-index: 100;
+	grid-column: 1 / span 1;
+	grid-row: 1 / -1;
+}
+
+@media only screen and (max-width: 650px) {
+	#D .slider .box .details {
+		grid-row: 2 / span 1;
+		grid-column: 1 / -1;
+		text-align: center;
+		padding: 2rem;
+		transform: translateY(-9rem);
+	}
+}
+
+#D .slider .box1 {
+	background-color: #500033;
+}
+
+#D .slider .box1 .illustration .inner {
+	background-color: #FF0077;
+}
+
+#D .slider .box2 {
+	background-color: #000050;
+}
+
+#D .slider .box2 .illustration .inner {
+	background-color: #0033FF;
+}
+
+#D .slider .box3 {
+	background-color: #00501D;
+}
+
+#D .slider .box3 .illustration .inner {
+	background-color: #00FF44;
+}
+
+#D .slider .box4 {
+	background-color: #554D00;
+}
+
+#D .slider .box4 .illustration .inner {
+	background-color: #FF4E00;
+}
+
+#D .slider .box5 {
+	background-color: #300050;
+}
+
+#D .slider .box5 .illustration .inner {
+	background-color: #8000FF;
+}
+
+#D .slider .illustration {
+	grid-column: 2 / -1;
+	grid-row: 1 / -1;
+	justify-self: center;
+}
+
+@media only screen and (max-width: 650px) {
+	#D .slider .illustration {
+		grid-row: 1 / span 1;
+		grid-column: 1 / -1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+#D .slider .illustration div {
+	height: 25rem;
+	width: 18rem;
+	border-radius: 3rem;
+	background-color: #FF0077;
+	position: relative;
+	transform: skewX(-10deg);
+}
+
+@media only screen and (max-width: 800px) {
+	#D .slider .illustration div {
+		height: 20rem;
+		width: 15rem;
+	}
+}
+
+#D .fleche_gauche, #D .fleche_droite, #D .trail {
+	z-index: 10000;
+	position: absolute;
+}
+
+#D .fleche_gauche, #D .fleche_droite {
+	width: 4rem;
+	cursor: pointer;
+	opacity: 0.2;
+	transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 650px) {
+	#D .fleche_gauche, #D .fleche_droite {
+		display: none;
+	}
+}
+
+#D .fleche_gauche:hover, #D .fleche_droite:hover {
+	opacity: 1;
+}
+
+#D .fleche_gauche {
+	top: 50%;
+	left: 2%;
+	transform: translateY(-50%);
+}
+
+#D .fleche_droite {
+	top: 50%;
+	right: 2%;
+	transform: translateY(-50%);
+}
+
+#D .trail {
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1rem;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 650px) {
+	#D .trail {
+		width: 90%;
+		bottom: 13%;
+	}
+}
+
+#D .trail div {
+	padding: 2rem;
+	border-top: 3px solid #fff;
+	cursor: pointer;
+	opacity: 0.2;
+	transition: all 0.3s ease;
+}
+
+#D .trail div:hover {
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 650px) {
+	#D .trail div {
+		padding: 1rem;
+	}
+}
+
+#D .active {
+	opacity: 1 !important;
+}
+  
+/*========================================================= */
+/*====================== SECTION E ======================== */
+/*========================================================= */
+
+#E {
+	background: url("img/texture.jpg") fixed;
+	background-size: cover;
+	padding-bottom: 5em;
+}
+
+#form {
+	position: relative;
+	width: 500px;
+	margin: 0 auto 0 auto;
+}
+
+input:hover::placeholder, input:hover, textarea:hover, textarea:hover::placeholder, #envoyer:hover, #message:hover {
+	color: white
+}
+
+input {
+	width: 470px;
+	height: 50px;
+	padding: 0px 15px 0px 15px;
+	background: transparent;
+	outline: none;
+	color: #726659;
+	border: solid 1px #b3aca7;
+	border-bottom: none;
+	transition: all 0.3s ease-in-out;
+}
+
+#message {
+	width: 470px;
+	height: 110px;
+	padding: 15px;
+	background: transparent;
+	outline: none;
+	color: #726659;
+	border: solid 1px #b3aca7;
+	transition: all 0.3s ease-in-out;
+}
+
+#envoyer {
+	width: 470px;
+	margin: -5px 0px 0px 0px;
+	color: #b3aca7;
+	outline: none;
+	cursor: pointer;
+	border: solid 1px #b3aca7;
+	border-top: none;
+}
