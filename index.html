@@ -1,3 +1,5 @@
+<?php include 'php.php'; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -126,8 +128,8 @@
             </div>
         </div>
     
-        <img src="img/fleche.png" class="fleche_gauche" style="filter: invert(1); transform: rotate(90deg);">
-        <img src="img/fleche.png" class="fleche_droite" style="filter: invert(1); transform: rotate(-90deg);">
+        <img src="img/fleche.png" class="fleche_gauche">
+        <img src="img/fleche.png" class="fleche_droite">
 
         <div class="trail">
             <div class="box1 active">1</div>
@@ -140,10 +142,14 @@
 
     <section id="E">
         <h5>Contact</h5>
-        <form id="form" method="POST" action="php.php">
+        <form id="form" method="POST" action="">
             <input id="nom" type="text" name="nom" placeholder="NOM">
             <input id="email" type="text" name="email" placeholder="E-MAIL">
             <textarea id="message" type="text" name="message" placeholder="MESSAGE"></textarea>
+            <div>
+                <p class="success"> <?php echo $success; ?></p>
+                <p class="failed"> <?php echo $failed; ?></p>
+             </div>
             <input id="envoyer" type="submit" value="ENVOYER">
         </form>
     </section>

@@ -1,10 +1,26 @@
 <?php
-$retour = mail('valfrebourg2016@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], '');
 
-    if ($retour)
-        echo '<p>Votre message a bien été envoyé.</p>';
+if(isset($_POST['submit'])) {
+    $mailto = "valfrebourg2016@gmail.com";
+    $name = $_POST['nom'];
+    $fromEmail = $_POST['email'];
 
+    $message = "Client name : " . $name . "\n" . "Client message : " . "\n" . $_POST['message'];
+    $message2 = "Dear" . $name . "\n" . "sdfhjsqdqfiu" . $_POST['message'];
 
+    $headers = "From: " . $fromEmail;
+    $headers2 = "From: " . $mailto;
+
+    $result1 = mail($mailto, "Sujet moi", $message, $headers);
+    $result2 = mail($fromEmail, "Sujet autre", $message2, $headers2);
+
+    if($result1 && $result2) {
+        $success = "Your message bien envoyé"
+    }
+    else {
+        $failed = "Sorry"
+    }
+}
 
 // $siteOwnersEmail = 'valfrebourg2016@gmail.com';
 
