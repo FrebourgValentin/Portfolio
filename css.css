@@ -10,7 +10,7 @@ Format Tablette: 768px
 */
 
 * {
-	font-family: Montserrat, sans-serif;
+	font-family: "Montserrat", sans-serif;
 	box-sizing: border-box;
 	margin: 0;
 }
@@ -378,6 +378,7 @@ h5 {
 	cursor: pointer;
 	opacity: 0.2;
 	transition: all 0.3s ease;
+	transform: scale(1.2);
 }
 
 @media only screen and (max-width: 650px) {
@@ -393,13 +394,15 @@ h5 {
 #D .fleche_gauche {
 	top: 50%;
 	left: 2%;
-	transform: translateY(-50%);
+	filter: invert(1); 
+	transform: rotate(90deg);
 }
 
 #D .fleche_droite {
 	top: 50%;
 	right: 2%;
-	transform: translateY(-50%);
+	filter: invert(1); 
+	transform: rotate(-90deg);
 }
 
 #D .trail {
