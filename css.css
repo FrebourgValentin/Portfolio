@@ -7,9 +7,17 @@ Orange: #ff4500
 Agrandissement: transform: scale(1.02);
 Format Mobile: 600px 
 Format Tablette: 768px
+
+Images => Unsplash / Flaticon
+
+- Mentions légales
+- Commenter le code
+- Mettre des noms ID et CLASSES explicites
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*==================== TOUTES SECTIONS ==================== */
 
 * {
 	font-family: "Montserrat", sans-serif;
@@ -17,24 +25,20 @@ Format Tablette: 768px
 	margin: 0;
 }
 
-/*========================================================= */
-/*==================== TOUTES SECTIONS ==================== */
-/*========================================================= */
-
 h5 {
-    font-size: 1.2em;
+    font-size: 1.6em;
+	font-weight: 500;
     color: #ff4500;
     text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .2em;
+	width: 100%;
 	padding: 1em;
 }
 
-/*========================================================= */
-/*====================== SECTION A ======================== */
-/*========================================================= */
+/*====================== SECTION INTRO ======================== */
 
-#A {
+#intro {
 	background: url("img/texture.jpg") fixed;
 	background-size: cover;
 	height: 100vh;
@@ -44,164 +48,154 @@ h5 {
     text-align: center;
 }
 
-#A h1 {
+#intro h1 {
     font-size: 3em;
     color: #fff;
-    margin-bottom: .5em;
+    margin: 0 .5em .5em .5em;
 }
 
-#A p {
-    font-size: .8em;
+#intro p {
+    font-size: 1em;
     color: #fff;
 	text-transform: uppercase;
 	letter-spacing: .2em;
 	text-align: center;
 }
 
-/*========================================================= */
-/*====================== SECTION B ======================== */
-/*========================================================= */
+/*====================== SECTION COMPETENCES ======================== */
 
-#B {
-	background: white;
+#competences .conteneur {
+	color: #313131;
+	padding: 1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: start;
 }
 
-#B .tagcloud {
+#competences .conteneur li {
+	list-style-image: url("img/liste-fleche.svg");
+	text-indent: 1em;
+	font-size: 1.2em;
+	line-height: 2em;
+}
+
+#competences h2 {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+#competences .tagcloud {
 	color: #313131;
 	font-weight: 500;
-	margin: auto;
 }
 
-#B .tagcloud--item:hover {
+#competences .tagcloud--item:hover {
 	color: #1c98ed;
 	font-weight: 700;
 }
 
-/*========================================================= */
-/*====================== SECTION C ======================== */
-/*========================================================= */
+@media screen and (max-width: 768px) {
+	#competences .conteneur {
+		padding-bottom: 2em;
+		flex-direction: column;
+		align-items: center;
+	}
+}
 
-#C {
+/*====================== SECTION PARCOURS ======================== */
+
+#parcours {
 	background: #313131;
 }
 
-#C .parcours {
+#parcours .conteneur {
 	position: relative;
-	width: 80%;
+	max-width: 90em;
 	margin: auto;
 	padding-bottom: 2em;
 }
 
-#C .ligne {
+#parcours .ligne {
 	position: absolute;
-	width: 6px;
+	width: .4em;
 	background-color: white;
-	top: 2em;
-	bottom: 2em;
+	border-radius: 1em;
+	top: 2.5em;
+	bottom: 4em;
 	left: 50%;
-	margin-left: -3px;
+	margin-left: -.2em;
 }
 
-#C .bloc {
-	padding: 10px 40px;
+#parcours .bloc_gauche, #parcours .bloc_droite {
+	padding: 2em;
 	position: relative;
 	width: 50%;
 }
 
-#C .bloc::after {
-	content: '';
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	right: -17px;
-	background-color: white;
-	border: 4px solid #1c98ed;
-	top: 15px;
-	border-radius: 100%;
-	z-index: 1;
-}
-
-#C .droite {
+#parcours .bloc_droite {
 	left: 50%;
 }
 
-#C .gauche::before {
-	content: " ";
+#parcours .point_gauche, #parcours .point_droite {
 	position: absolute;
-	top: 22px;
-	width: 0;
-	right: 30px;
-	border: medium solid white;
-	border-width: 10px 0 10px 10px;
-	border-color: transparent transparent transparent white;
+	width: 2em;
+	height: 2em;
+	background-color: white;
+	border: 4px solid #1c98ed;
+	border-radius: 1em;
+	right: -1em;
 }
 
-#C .droite::before {
-	content: " ";
-	position: absolute;
-	top: 22px;
-	width: 0;
-	left: 30px;
-	border: medium solid white;
-	border-width: 10px 10px 10px 0;
-	border-color: transparent white transparent transparent;
+#parcours .point_droite {
+	left: -1em;
 }
 
-#C .droite::after {
-	left: -16px;
-}
-
-#C .texte {
-	padding: 20px;
+#parcours .texte {
+	padding: 1.2em;
 	background-color: white;
 	position: relative;
 	border-radius: .8em;
 }
 
-#C h2 {
+#parcours h2 {
     font-size: 1.2em;
-    margin-bottom: .5em;
+    margin-bottom: .8em;
 }
 
-@media screen and (max-width: 600px) {
-	#C .ligne {
-		left: 31px;
+@media screen and (max-width: 768px) {
+	#parcours .ligne {
+		left: 2em;
 	}
 
-	#C .bloc {
+	#parcours .bloc_gauche, #parcours .bloc_droite {
 		width: 100%;
-		padding-left: 70px;
-		padding-right: 25px;
+		padding-left: 4em;
 	}
 
-	#C .bloc::before {
-		left: 60px;
-		border: medium solid white;
-		border-width: 10px 10px 10px 0;
-		border-color: transparent white transparent transparent;
+	#parcours .point_gauche, #parcours .point_droite {
+		left: 1em;
 	}
 
-	#C .gauche::after, #C .droite::after {
-		left: 15px;
-	}
-
-	#C .droite {
+	#parcours .bloc_droite {
 		left: 0;
 	}
 }
 
-/*========================================================= */
-/*====================== SECTION D ======================== */
-/*========================================================= */
+/*====================== SECTION REALISATIONS ======================== */
 
-#D {
-	background: #313131;
+#realisations {
 	color: white;
 	position: relative;
 	overflow: hidden;
 }
 
-#D .slider {
+#realisations h5 {
+	position: absolute;
+	z-index: 1;
+}
+
+#realisations .slider {
 	display: flex;
 	width: 500%;
 	height: 50rem;
@@ -210,12 +204,12 @@ h5 {
 }
 
 @media only screen and (max-width: 1000px) {
-	#D .slider {
+	#realisations .slider {
 		height: 100vh;
 	}
 }
 
-#D .slider .box {
+#realisations .slider .box {
 	height: 100%;
 	width: 100%;
 	display: grid;
@@ -226,13 +220,13 @@ h5 {
 }
 
 @media only screen and (max-width: 650px) {
-	#D .slider .box {
+	#realisations .slider .box {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
 	}
 }
 
-#D .slider .box .bg {
+#realisations .slider .box .bg {
 	padding: 2rem;
 	background-color: rgba(0, 0, 0, 0.2);
 	width: 55%;
@@ -245,13 +239,13 @@ h5 {
 }
 
 @media only screen and (max-width: 800px) {
-	#D .slider .box .bg {
+	#realisations .slider .box .bg {
 		width: 65%;
 	}
 }
 
 @media only screen and (max-width: 650px) {
-	#D .slider .box .bg {
+	#realisations .slider .box .bg {
 		width: 100%;
 		left: 0;
 		bottom: 0;
@@ -260,7 +254,7 @@ h5 {
 	}
 }
 
-#D .slider .box .bg::before {
+#realisations .slider .box .bg::before {
 	content: "";
 	width: 100%;
 	height: 100%;
@@ -273,14 +267,14 @@ h5 {
 }
 
 @media only screen and (max-width: 650px) {
-	#D .slider .box .bg::before {
+	#realisations .slider .box .bg::before {
 		width: 120%;
 		bottom: 0;
 		transform: skewX(0deg);
 	}
 }
 
-#D .slider .box .details {
+#realisations .slider .box .details {
 	padding: 5rem;
 	padding-left: 10rem;
 	z-index: 100;
@@ -289,7 +283,7 @@ h5 {
 }
 
 @media only screen and (max-width: 650px) {
-	#D .slider .box .details {
+	#realisations .slider .box .details {
 		grid-row: 2 / span 1;
 		grid-column: 1 / -1;
 		text-align: center;
@@ -298,54 +292,54 @@ h5 {
 	}
 }
 
-#D .slider .box1 {
+#realisations .slider .box1 {
 	background-color: #500033;
 }
 
-#D .slider .box1 .illustration .inner {
+#realisations .slider .box1 .illustration .inner {
 	background-color: #FF0077;
 }
 
-#D .slider .box2 {
+#realisations .slider .box2 {
 	background-color: #000050;
 }
 
-#D .slider .box2 .illustration .inner {
+#realisations .slider .box2 .illustration .inner {
 	background-color: #0033FF;
 }
 
-#D .slider .box3 {
+#realisations .slider .box3 {
 	background-color: #00501D;
 }
 
-#D .slider .box3 .illustration .inner {
+#realisations .slider .box3 .illustration .inner {
 	background-color: #00FF44;
 }
 
-#D .slider .box4 {
+#realisations .slider .box4 {
 	background-color: #554D00;
 }
 
-#D .slider .box4 .illustration .inner {
+#realisations .slider .box4 .illustration .inner {
 	background-color: #FF4E00;
 }
 
-#D .slider .box5 {
+#realisations .slider .box5 {
 	background-color: #300050;
 }
 
-#D .slider .box5 .illustration .inner {
+#realisations .slider .box5 .illustration .inner {
 	background-color: #8000FF;
 }
 
-#D .slider .illustration {
+#realisations .slider .illustration {
 	grid-column: 2 / -1;
 	grid-row: 1 / -1;
 	justify-self: center;
 }
 
 @media only screen and (max-width: 650px) {
-	#D .slider .illustration {
+	#realisations .slider .illustration {
 		grid-row: 1 / span 1;
 		grid-column: 1 / -1;
 		display: flex;
@@ -354,7 +348,7 @@ h5 {
 	}
 }
 
-#D .slider .illustration div {
+#realisations .slider .illustration div {
 	height: 25rem;
 	width: 18rem;
 	border-radius: 3rem;
@@ -364,18 +358,18 @@ h5 {
 }
 
 @media only screen and (max-width: 800px) {
-	#D .slider .illustration div {
+	#realisations .slider .illustration div {
 		height: 20rem;
 		width: 15rem;
 	}
 }
 
-#D .fleche_gauche, #D .fleche_droite, #D .trail {
+#realisations .fleche_gauche, #realisations .fleche_droite, #realisations .trail {
 	z-index: 10000;
 	position: absolute;
 }
 
-#D .fleche_gauche, #D .fleche_droite {
+#realisations .fleche_gauche, #realisations .fleche_droite {
 	width: 4rem;
 	cursor: pointer;
 	opacity: 0.2;
@@ -384,30 +378,30 @@ h5 {
 }
 
 @media only screen and (max-width: 650px) {
-	#D .fleche_gauche, #D .fleche_droite {
+	#realisations .fleche_gauche, #realisations .fleche_droite {
 		display: none;
 	}
 }
 
-#D .fleche_gauche:hover, #D .fleche_droite:hover {
+#realisations .fleche_gauche:hover, #realisations .fleche_droite:hover {
 	opacity: 1;
 }
 
-#D .fleche_gauche {
+#realisations .fleche_gauche {
 	top: 50%;
 	left: 2%;
-	filter: invert(1); 
-	transform: rotate(90deg);
+	filter: invert(1);
+	transform: rotate(180deg);
 }
 
-#D .fleche_droite {
+#realisations .fleche_droite {
 	top: 50%;
 	right: 2%;
 	filter: invert(1); 
-	transform: rotate(-90deg);
+	transform: rotate(0deg);
 }
 
-#D .trail {
+#realisations .trail {
 	bottom: 5%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -420,13 +414,13 @@ h5 {
 }
 
 @media only screen and (max-width: 650px) {
-	#D .trail {
+	#realisations .trail {
 		width: 90%;
 		bottom: 13%;
 	}
 }
 
-#D .trail div {
+#realisations .trail div {
 	padding: 2rem;
 	border-top: 3px solid #fff;
 	cursor: pointer;
@@ -434,23 +428,21 @@ h5 {
 	transition: all 0.3s ease;
 }
 
-#D .trail div:hover {
+#realisations .trail div:hover {
 	opacity: 0.5;
 }
 
 @media only screen and (max-width: 650px) {
-	#D .trail div {
+	#realisations .trail div {
 		padding: 1rem;
 	}
 }
 
-#D .active {
+#realisations .active {
 	opacity: 1 !important;
 }
   
-/*========================================================= */
-/*====================== SECTION E ======================== */
-/*========================================================= */
+/*====================== SECTION CONTACT ======================== */
 
 #E {
 	background: url("img/texture.jpg") fixed;
@@ -460,7 +452,7 @@ h5 {
 
 #form {
 	position: relative;
-	width: 500px;
+	width: 300px;
 	margin: 0 auto 0 auto;
 }
 
@@ -469,7 +461,7 @@ input:hover::placeholder, input:hover, textarea:hover, textarea:hover::placehold
 }
 
 input {
-	width: 470px;
+	width: 270px;
 	height: 50px;
 	padding: 0px 15px 0px 15px;
 	background: transparent;
@@ -481,7 +473,7 @@ input {
 }
 
 #message {
-	width: 470px;
+	width: 270px;
 	height: 110px;
 	padding: 15px;
 	background: transparent;
@@ -492,7 +484,7 @@ input {
 }
 
 #envoyer {
-	width: 470px;
+	width: 270px;
 	margin: -5px 0px 0px 0px;
 	color: #b3aca7;
 	outline: none;

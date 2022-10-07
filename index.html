@@ -1,12 +1,10 @@
-<?php include 'php.php'; ?>
+<!-- <?php include "php.php"); ?> -->
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
 	<title>Portfolio</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" href="css.css">
@@ -17,26 +15,42 @@
 </head>
 
 <body>
-    <section id="A">
+    <section id="intro">
         <h5>Bonjour,</h5>
-
         <h1>Je suis Valentin Frébourg</h1>
         <p>Développeur Front-end</p>
     </section>
 
-    <section id="B">
+    <section id="competences">
         <h5>Compétences</h5>
 
-        <span class="sphere"></span>
+        <div class="conteneur">
+            <div>
+                <h2>Compétences techniques</h2>
+                <span class="sphere"></span>
+            </div>
+
+            <div>
+                <h2>Outils / Logiciels</h2>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>GitHub</li>
+                    <li>Suite Office</li>
+                    <li>Suite Adobe</li>
+                </ul>
+            </div>
+        </div>
 	</section>
 
-    <section id="C">
+    <section id="parcours">
         <h5>Parcours</h5>
 
-        <div class="parcours">
+        <div class="conteneur">
             <div class="ligne"></div>
 
-            <div class="bloc gauche">
+            <div class="bloc_gauche">
+                <div class="point_gauche"></div>
+
                 <div class="texte">
                     <h2>2022</h2>
                     <h2>LP UX2I (Licence Professionnelle User Experience Integration Interface)</h2>
@@ -44,7 +58,9 @@
                 </div>
             </div>
 
-            <div class="bloc droite">
+            <div class="bloc_droite">
+                <div class="point_droite"></div>
+
                 <div class="texte">
                     <h2>2021</h2>
                     <h2>BTS SNIR (Brevet de Technicien Supérieur Systèmes Numériques option Informatique et Réseaux)</h2>
@@ -52,7 +68,9 @@
                 </div>
             </div>
 
-            <div class="bloc gauche">
+            <div class="bloc_gauche">
+                <div class="point_gauche"></div>
+
                 <div class="texte">
                     <h2>2019</h2>
                     <h2>Baccalauréat Scientifique</h2>
@@ -62,7 +80,7 @@
         </div>
 	</section>
 
-    <section id="D">
+    <section id="realisations">
         <h5>Réalisations</h5>
 
         <div class="slider">
@@ -145,15 +163,13 @@
             <input id="nom" type="text" name="nom" placeholder="NOM">
             <input id="email" type="text" name="email" placeholder="E-MAIL">
             <textarea id="message" type="text" name="message" placeholder="MESSAGE"></textarea>
-            <div>
-                <p class="success"> <?php echo $success; ?></p>
-                <p class="failed"> <?php echo $failed; ?></p>
-             </div>
+            <!-- <div>
+                <p> <?php echo $success; ?></p>
+                <p> <?php echo $failed; ?></p>
+             </div> -->
             <input id="envoyer" type="submit" value="ENVOYER">
         </form>
     </section>
-
-    <!-- Images => Unsplash / Flaticon -->
 
     <script src="js.js"></script>
 </body>

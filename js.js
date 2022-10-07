@@ -1,10 +1,8 @@
-/*========================================================= */
 /*====================== SECTION B ======================== */
-/*========================================================= */
 
-const skills = ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Suite Office','Suite Adobe','Responsive Design','Wordpress'];
+const competences = ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Responsive Design','Wordpress'];
 
-var tagCloud = TagCloud('.sphere', skills, {
+var tagCloud = TagCloud('.sphere', competences, {
   radius: 200,
   maxSpeed: 'normal', // slow, normal, fast
   initSpeed: 'normal',
@@ -12,9 +10,7 @@ var tagCloud = TagCloud('.sphere', skills, {
   keep: true // interact with cursor move on mouse out
 });
 
-/*========================================================= */
 /*====================== SECTION D ======================== */
-/*========================================================= */
 
 const slider = document.querySelector(".slider")
 const trail = document.querySelector(".trail").querySelectorAll("div")
@@ -49,9 +45,9 @@ const move = (S, T) => {
 }
 
 const tl = gsap.timeline({ defaults: { duration: 0.6, ease: "power2.inOut" } })
-tl.from("#D .bg", { x: "-100%", opacity: 0 })
-  .from("#D p", { opacity: 0 }, "-=0.3")
-  .from("#D h2", { opacity: 0, y: "30px" }, "-=0.3")
+tl.from("#realisations .bg", { x: "-100%", opacity: 0 })
+  .from("#realisations p", { opacity: 0 }, "-=0.3")
+  .from("#realisations h2", { opacity: 0, y: "30px" }, "-=0.3")
 
 const animate = () => tl.restart()
 

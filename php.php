@@ -1,5 +1,7 @@
 <?php
 
+echo "<p>Copyright &copy; 1999-" . date("Y") . " W3Schools.com</p>";
+
 if(isset($_POST['submit'])) {
     $mailto = "valfrebourg2016@gmail.com";
     $name = $_POST['nom'];
@@ -26,7 +28,7 @@ if(isset($_POST['submit'])) {
 
 // if($_POST) {
 //    	$name = trim(stripslashes($_POST['contactName']));
-// 	$email = trim(stripslashes($_POST['contactEmail']));
+// 	    $email = trim(stripslashes($_POST['contactEmail']));
 //    	$subject = trim(stripslashes($_POST['contactSubject']));
 //    	$contact_message = trim(stripslashes($_POST['contactMessage']));
 
@@ -47,17 +49,17 @@ if(isset($_POST['submit'])) {
 // 	}
 
 //    	$message .= "Email from: " . $name . "<br />";
-// 	$message .= "Email address: " . $email . "<br />";
+// 	    $message .= "Email address: " . $email . "<br />";
 //   	$message .= "Message: <br />";
 //    	$message .= $contact_message;
 //    	$message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
 
 //    	$from =  $name . " <" . $email . ">";
 
-// 	$headers = "From: " . $from . "\r\n";
-// 	$headers .= "Reply-To: ". $email . "\r\n";
+// 	    $headers = "From: " . $from . "\r\n";
+// 	    $headers .= "Reply-To: ". $email . "\r\n";
 //  	$headers .= "MIME-Version: 1.0\r\n";
-// 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+// 	    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
 
 //    	if (!$error) {
