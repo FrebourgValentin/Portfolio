@@ -4,9 +4,6 @@ Gris: #313131
 Bleu: #1c98ed
 Orange: #ff4500
 
-transform: scale(1.02);
-transform: skewX(-10deg);
-
 Format Mobile: 600px 
 Format Tablette: 768px
 
@@ -249,23 +246,23 @@ button {
 	grid-row: 1 / -1;
 }
 
-#realisations .slider .box1 {
+#realisations .slider .projet_1 {
 	background-color: #592900;
 }
 
-#realisations .slider .box2 {
+#realisations .slider .projet_2 {
 	background-color: #300050;
 }
 
-#realisations .slider .box3 {
+#realisations .slider .projet_3 {
 	background-color: #00501D;
 }
 
-#realisations .slider .box4 {
+#realisations .slider .projet_4 {
 	background-color: #554D00;
 }
 
-#realisations .slider .box5 {
+#realisations .slider .projet_5 {
 	background-color: #000050;
 }
 
@@ -280,12 +277,7 @@ button {
 	position: relative;
 }
 
-#realisations .trail {
-	z-index: 1;
-	position: absolute;
-}
-
-#realisations .trail {
+#realisations .blocs {
 	bottom: 5%;
 	left: 50%;
 	transform: translateX(-50%);
@@ -295,9 +287,11 @@ button {
 	gap: 1em;
 	text-align: center;
 	font-size: 2em;
+	z-index: 1;
+	position: absolute;
 }
 
-#realisations .trail div {
+#realisations .blocs div {
 	padding: .8em;
 	border-top: 4px solid #fff;
 	cursor: pointer;
@@ -305,7 +299,7 @@ button {
 	transition: all 0.3s ease;
 }
 
-#realisations .trail div:hover {
+#realisations .blocs div:hover {
 	opacity: 0.5;
 }
 
@@ -345,7 +339,7 @@ button {
 		padding-top: 4em;
 	}
 
-	#realisations .trail {
+	#realisations .blocs {
 		width: 100%;
 		bottom: 5%;
 		gap: 0em;
@@ -363,6 +357,7 @@ button {
 #form {
 	position: relative;
 	width: 300px;
+	padding: 1em;
 	margin: 0 auto 0 auto;
 }
 

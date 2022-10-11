@@ -1,46 +1,43 @@
 /*====================== SECTION INTRO ======================== */
 
-const competences = ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Responsive Design','Wordpress'];
-
-var tagCloud = TagCloud('.sphere', competences, {
-  radius: 200,
-  maxSpeed: 'normal', // slow, normal, fast
-  initSpeed: 'normal',
-  direction: 45,
-  keep: true // interact with cursor move on mouse out
-});
+TagCloud(
+  ".sphere", // Emplacement de la sphere
+  ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Responsive Design','Wordpress'], // Tableau de texte
+  { radius: 200, keep: true } // Rayon de la sphere, Interaction avec le curseur
+);
 
 /*====================== SECTION REALISATIONS ======================== */
 
-const slider = document.querySelector(".slider")
-const trail = document.querySelectorAll(".trail div")
+const slider = document.querySelector(".slider");
+const blocs = document.querySelectorAll(".blocs div");
 
-const tl = gsap.timeline({ defaults: { duration: 0.6, ease: "power2.inOut" } })
-tl.from("#realisations .bg", { x: "-100%", opacity: 0 })
-  .from("#realisations p", { opacity: 0 }, "-=0.3")
-  .from("#realisations h2", { opacity: 0, y: "30px" }, "-=0.3")
+const tl = gsap.timeline({ duration: 0.3 });
+tl.from("#realisations .bg", { x: "-100%", opacity: 0 });
+tl.from("#realisations h2", { opacity: 0 }, "-=0.3");
+tl.from("#realisations p", { opacity: 0, y: "30px" }, "-=0.3");
+tl.from("#realisations button", { opacity: 0, y: "30px" }, "-=0.3");
 
-const clickCheck = (e) => {
-  trail.forEach(cur => cur.classList.remove("active"))
-  const check = e.target
-  check.classList.add("active")
+function Animation_Slide() {
+  blocs.forEach(bloc => bloc.classList.remove("active"));
+  this.classList.add("active");
 
-  let value = 0
-
-  if (check.classList.contains("box1")) {
-    value = 0
-  } else if (check.classList.contains("box2")) {
-    value = 20
-  } else if (check.classList.contains("box3")) {
-    value = 40
-  } else if (check.classList.contains("box4")) {
-    value = 60
-  } else {
-    value = 80
+  if (this.classList.contains("bloc_1")) {
+    slider.style.transform = "translateX(-0%)";
+  } 
+  else if (this.classList.contains("bloc_2")) {
+    slider.style.transform = "translateX(-20%)";
+  } 
+  else if (this.classList.contains("bloc_3")) {
+    slider.style.transform = "translateX(-40%)";
+  } 
+  else if (this.classList.contains("bloc_4")) {
+    slider.style.transform = "translateX(-60%)";
+  } 
+  else {
+    slider.style.transform = "translateX(-80%)";
   }
 
-  slider.style.transform = `translateX(-${value}%)`
-  tl.restart()
-}
+  tl.restart();
+};
 
-trail.forEach(cur => cur.addEventListener("click", (ev) => clickCheck(ev)))
+blocs.forEach(bloc => bloc.addEventListener("click", Animation_Slide));
