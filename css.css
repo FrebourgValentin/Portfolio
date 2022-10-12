@@ -26,22 +26,13 @@ Images => Unsplash (textures) / Freepik (autres)
 
 h5 {
     font-size: 1.6em;
-	font-weight: 500;
+	font-weight: 600;
     color: #ff4500;
     text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .2em;
 	width: 100%;
 	padding: 1em;
-}
-
-button {
-	border: 0;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
 }
 
 /*====================== SECTION INTRO ======================== */
@@ -162,6 +153,7 @@ button {
 #parcours .texte {
 	padding: 1.2em;
 	background-color: white;
+	color: #313131;
 	position: relative;
 	border-radius: .8em;
 }
@@ -206,7 +198,7 @@ button {
 #realisations .slider {
 	display: flex;
 	width: 500%;
-	height: 50em;
+	height: 100vh;
 	transition: all 0.25s ease-in;
 }
 
@@ -220,16 +212,16 @@ button {
 	position: relative;
 }
 
-#realisations .slider .box .bg {
+#realisations .slider .box .background {
 	padding: 2em;
 	background-color: rgba(0, 0, 0, 0.2);
-	width: 45%;
+	width: 50%;
 	transform: skewX(7deg);
 	position: absolute;
 	height: 100%;
 }
 
-#realisations .slider .box .bg::before {
+#realisations .slider .box .background::before {
 	content: "";
 	width: 100%;
 	height: 100%;
@@ -240,10 +232,34 @@ button {
 }
 
 #realisations .slider .box .details {
-	padding: 10em;
+	padding-left: 7em;
+	padding-right: 3em;
 	z-index: 1;
 	grid-column: 1 / span 1;
 	grid-row: 1 / -1;
+}
+
+#realisations .slider .box .details p {
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+#realisations a {
+	font-size: 1em;
+	font-weight: 700;
+	color: #313131;
+	background-color: #fff;
+	border: 4px solid #1c98ed;
+    border-radius: 10px;
+	padding: .5em 2em;
+    text-align: center;
+	text-decoration: none;
+}
+
+#realisations a:hover {
+	color: white;
+    background-color: #1c98ed;
+	cursor: pointer;
 }
 
 #realisations .slider .projet_1 {
@@ -273,12 +289,12 @@ button {
 }
 
 #realisations .slider .illustration img {
-	width: 16em;
+	width: 20em;
 	position: relative;
 }
 
 #realisations .blocs {
-	bottom: 5%;
+	bottom: 2em;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 70%;
@@ -300,21 +316,26 @@ button {
 }
 
 #realisations .blocs div:hover {
+	border-top: 10px solid #fff;
 	opacity: 0.5;
 }
 
 #realisations .active {
-	border-bottom: 4px solid #fff;
+	border-top: 10px solid #fff !important;
 	opacity: 1 !important;
 }
 
 @media only screen and (max-width: 768px) {
+	#realisations .slider {
+		height: 60em;
+	}
+	
 	#realisations .slider .box {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
 	}
 
-	#realisations .slider .box .bg {
+	#realisations .slider .box .background {
 		left: -10em;
 	}
 

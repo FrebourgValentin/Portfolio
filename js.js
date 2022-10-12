@@ -11,11 +11,11 @@ TagCloud(
 const slider = document.querySelector(".slider");
 const blocs = document.querySelectorAll(".blocs div");
 
-const tl = gsap.timeline({ duration: 0.3 });
-tl.from("#realisations .bg", { x: "-100%", opacity: 0 });
-tl.from("#realisations h2", { opacity: 0 }, "-=0.3");
-tl.from("#realisations p", { opacity: 0, y: "30px" }, "-=0.3");
-tl.from("#realisations button", { opacity: 0, y: "30px" }, "-=0.3");
+const tl = gsap.timeline();
+tl.from("#realisations .background", { x: "-100%", opacity: 0 });
+tl.from("#realisations h2", { opacity: 0 });
+tl.from("#realisations p", { opacity: 0, y: "30px" });
+tl.from("#realisations a", { opacity: 0, y: "30px" });
 
 function Animation_Slide() {
   blocs.forEach(bloc => bloc.classList.remove("active"));
