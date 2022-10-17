@@ -1,9 +1,18 @@
-/*====================== SECTION INTRO ======================== */
+/*====================== SECTION COMPETENCES ======================== */
+
+let rayon_sphere = 0;
+
+if (screen.width < 500) {
+  rayon_sphere = 150;
+}
+else {
+  rayon_sphere = 200;
+}
 
 TagCloud(
   ".sphere", // Emplacement de la sphere
   ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Responsive Design','Wordpress'], // Tableau de texte
-  { radius: 200, keep: true } // Rayon de la sphere, Interaction avec le curseur
+  { radius: rayon_sphere, keep: true } // Rayon de la sphere en px, Interaction avec le curseur
 );
 
 /*====================== SECTION REALISATIONS ======================== */

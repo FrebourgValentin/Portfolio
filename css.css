@@ -1,5 +1,4 @@
 /*
-Blanc: #fff
 Gris: #313131
 Bleu: #1c98ed
 Orange: #ff4500
@@ -9,9 +8,7 @@ Format Tablette: 768px
 
 Images => Unsplash (textures) / Freepik (autres)
 
-- Mentions légales
 - Commenter le code
-- Mettre des noms ID et CLASSES explicites
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -31,7 +28,6 @@ h5 {
     text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .2em;
-	width: 100%;
 	padding: 1em;
 }
 
@@ -87,6 +83,7 @@ h5 {
 #competences .tagcloud {
 	color: #313131;
 	font-weight: 500;
+	margin: auto;
 }
 
 #competences .tagcloud--item:hover {
@@ -102,20 +99,20 @@ h5 {
 	}
 }
 
-/*====================== SECTION PARCOURS ======================== */
+/*====================== SECTION PARCOURS / EXPERIENCE ======================== */
 
-#parcours {
+#parcours, #experience {
 	background: #313131;
 }
 
-#parcours .conteneur {
+#parcours .conteneur, #experience .conteneur {
 	position: relative;
 	max-width: 90em;
 	margin: auto;
 	padding-bottom: 2em;
 }
 
-#parcours .ligne {
+#parcours .ligne, #experience .ligne {
 	position: absolute;
 	width: .4em;
 	background-color: white;
@@ -126,17 +123,17 @@ h5 {
 	margin-left: -.2em;
 }
 
-#parcours .bloc_gauche, #parcours .bloc_droite {
+#parcours .bloc_gauche, #parcours .bloc_droite, #experience .bloc_gauche, #experience .bloc_droite {
 	padding: 2em;
 	position: relative;
 	width: 50%;
 }
 
-#parcours .bloc_droite {
+#parcours .bloc_droite, #experience .bloc_droite {
 	left: 50%;
 }
 
-#parcours .point_gauche, #parcours .point_droite {
+#parcours .point_gauche, #parcours .point_droite, #experience .point_gauche, #experience .point_droite {
 	position: absolute;
 	width: 2em;
 	height: 2em;
@@ -146,11 +143,11 @@ h5 {
 	right: -1em;
 }
 
-#parcours .point_droite {
+#parcours .point_droite, #experience .point_droite {
 	left: -1em;
 }
 
-#parcours .texte {
+#parcours .texte, #experience .texte {
 	padding: 1.2em;
 	background-color: white;
 	color: #313131;
@@ -158,26 +155,26 @@ h5 {
 	border-radius: .8em;
 }
 
-#parcours h2 {
+#parcours h2, #experience h2 {
     font-size: 1.2em;
     margin-bottom: .8em;
 }
 
 @media screen and (max-width: 768px) {
-	#parcours .ligne {
+	#parcours .ligne, #experience .ligne {
 		left: 2em;
 	}
 
-	#parcours .bloc_gauche, #parcours .bloc_droite {
+	#parcours .bloc_gauche, #parcours .bloc_droite, #experience .bloc_gauche, #experience .bloc_droite {
 		width: 100%;
 		padding-left: 4em;
 	}
 
-	#parcours .point_gauche, #parcours .point_droite {
+	#parcours .point_gauche, #parcours .point_droite, #experience .point_gauche, #experience .point_droite {
 		left: 1em;
 	}
 
-	#parcours .bloc_droite {
+	#parcours .bloc_droite, #experience .bloc_droite {
 		left: 0;
 	}
 }
@@ -192,6 +189,7 @@ h5 {
 
 #realisations h5 {
 	position: absolute;
+	width: 100%;
 	z-index: 1;
 }
 
@@ -232,7 +230,7 @@ h5 {
 }
 
 #realisations .slider .box .details {
-	padding-left: 7em;
+	padding-left: 20%;
 	padding-right: 3em;
 	z-index: 1;
 	grid-column: 1 / span 1;
@@ -249,7 +247,7 @@ h5 {
 	font-weight: 700;
 	color: #313131;
 	background-color: #fff;
-	border: 4px solid #1c98ed;
+	border: .2em solid #1c98ed;
     border-radius: 10px;
 	padding: .5em 2em;
     text-align: center;
@@ -309,19 +307,19 @@ h5 {
 
 #realisations .blocs div {
 	padding: .8em;
-	border-top: 4px solid #fff;
+	border-top: .1em solid #fff;
 	cursor: pointer;
 	opacity: 0.2;
 	transition: all 0.3s ease;
 }
 
 #realisations .blocs div:hover {
-	border-top: 10px solid #fff;
+	border-top: .4em solid #fff;
 	opacity: 0.5;
 }
 
 #realisations .active {
-	border-top: 10px solid #fff !important;
+	border-top: .4em solid #fff !important;
 	opacity: 1 !important;
 }
 
@@ -375,46 +373,63 @@ h5 {
 	padding-bottom: 5em;
 }
 
-#form {
-	position: relative;
-	width: 300px;
-	padding: 1em;
-	margin: 0 auto 0 auto;
+#contact form {
+	margin: auto;
+	width: 40%;
+	padding: 2em;
 }
 
-input:hover::placeholder, input:hover, textarea:hover, textarea:hover::placeholder, #envoyer:hover, #message:hover {
-	color: white
+#contact input::placeholder, #contact textarea::placeholder {
+	color: rgba(255, 255, 255, .4);
 }
 
-input {
-	width: 270px;
-	height: 50px;
-	padding: 0px 15px 0px 15px;
-	background: transparent;
-	outline: none;
+#contact input, #contact input:hover, #contact input:hover::placeholder, #contact textarea, #contact textarea:hover, #contact textarea:hover::placeholder {
 	color: #fff;
-	border: solid 1px #fff;
+	outline: none;
+	transition: all 0.3s ease-in;
+}
+
+#contact #nom {
+	border: solid .2em #fff;
 	border-bottom: none;
-	transition: all 0.3s ease-in-out;
+	border-radius: 10px 10px 0 0;
 }
 
-#message {
-	width: 270px;
-	height: 110px;
-	padding: 15px;
-	background: transparent;
-	outline: none;
-	color: #fff;
-	border: solid 1px #fff;
-	transition: all 0.3s ease-in-out;
+#contact #email {
+	border: solid .2em #fff;
+	border-bottom: none;
 }
 
-#envoyer {
-	width: 270px;
-	margin: -5px 0px 0px 0px;
-	color: #fff;
-	outline: none;
+#contact input, #contact textarea {
+	width: 100%;
+	padding: 1em;
+	background-color: rgba(28, 152, 237, .2);
+}
+
+#contact textarea {
+	height: 10em;
+	border: solid .2em #fff;
+	border-radius: 0 0 10px 10px;
+}
+
+#contact #envoyer {
+	font-size: 1em;
+	font-weight: 600;
+	letter-spacing: .1em;
+	margin-top: 2em;
+	padding: 1em;
 	cursor: pointer;
-	border: solid 1px #fff;
-	border-top: none;
+	border: solid .2em #fff;
+	border-radius: 10px;
+}
+
+#contact #envoyer:hover {
+	background: #fff;
+	color: #313131;
+}
+
+@media only screen and (max-width: 768px) {
+	#contact form {
+		width: 100%;
+	}
 }
