@@ -1,0 +1,133 @@
+.menu {
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'new avatar_1' 'avatar_2 avatar_2';
+    background: #00529c;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.avatar_1 {
+    grid-area: avatar_1;
+}
+
+.avatar_2 {
+    grid-area: avatar_2;
+}
+
+.new {
+    grid-area: new;
+}
+
+.new_img {
+    max-width: 100%;
+} 
+
+#cursor {
+    cursor: pointer;
+}
+
+.plateau {
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'joueur score tipep' 'joueur aire_jeux tipep';
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows: 100px 1fr;
+}
+
+.score {
+    grid-area: score;
+    border-radius: 15px;
+    color: rgb(70, 70, 70);
+    margin: auto;
+    font-size: 30px;
+}
+
+.joueur {
+    grid-area: joueur;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 3px #00529c;
+    color: rgb(70, 70, 70);
+    padding-top: 20px;
+}
+
+.tipep {
+    grid-area: tipep;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 3px #00529c;
+    color: rgb(70, 70, 70);
+    padding-top: 20px;
+}
+
+.aire_jeux {
+    grid-area: aire_jeux;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 15px;
+    color: rgb(70, 70, 70);
+}
+
+#a {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    max-width: 200px;
+}
+
+.message {
+    font-size: 1.2em;
+    margin-left: -50px;
+    margin-right: -50px;
+}
+
+.avatar {
+    margin: 20px;
+    padding: 10px;
+    background: #00529c;
+    border-radius: 15px;
+}
+
+.mains img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.avatar_1, .new, .retour{
+    margin: auto;
+}
+
+.avatar_2{
+    display: none;
+}
+
+.joueur_1, .joueur_2, .joueur_3, .joueur_4 {
+    width: 150px;
+    height: 150px;
+}
+
+.avatar_2 img {
+    border: solid 3px white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.avatar_2 img:hover {
+    background: white;
+}
+
+.retour, .retour:hover {
+    color: white;
+    text-decoration: none;
+}
