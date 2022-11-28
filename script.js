@@ -2,7 +2,7 @@
 
 let rayon_sphere = 0;
 
-if (screen.width < 500) {
+if (screen.width < 500) { // Responsivité de la sphere selon la largeur de l'écran
   rayon_sphere = 150;
 }
 else {
