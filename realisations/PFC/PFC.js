@@ -13,7 +13,7 @@ class Joueur_Humain {
         document.querySelector(".pseudo").innerHTML = this.Nom;
     }
 
-    Choix_Joueur(Choix_J, Tipep, Jeux) {
+    Choix_Joueur(Choix_J, Bot, Jeux) {
         let Avatar = document.querySelector(".joueur .avatar img");
         let Main_J = document.createElement("img");
 
@@ -21,18 +21,18 @@ class Joueur_Humain {
             Aire.removeChild(Aire.firstChild);
 
         if (Avatar.className == "joueur_4")
-            Main_J.setAttribute("src", "Images_Jeu_2/" + Image_main[Choix_J] + "_c1.png");
+            Main_J.setAttribute("src", "img_pfc/" + Image_main[Choix_J] + "_c1.png");
 
         else if (Avatar.className == "joueur_3")
-            Main_J.setAttribute("src", "Images_Jeu_2/" + Image_main[Choix_J] + "_c2.png");
+            Main_J.setAttribute("src", "img_pfc/" + Image_main[Choix_J] + "_c2.png");
 
         else
-            Main_J.setAttribute("src", "Images_Jeu_2/" + Image_main[Choix_J] + ".png");
+            Main_J.setAttribute("src", "img_pfc/" + Image_main[Choix_J] + ".png");
 
         Main_J.setAttribute("class", "new_img");
         Aire.appendChild(Main_J);
         this.Choix = Choix_J;
-        Tipep.Choix_Tipep(Jeux, this);
+        Bot.Choix_Bot(Jeux, this);
     }
 
     Gestion_Avatar(A) {
@@ -45,25 +45,25 @@ class Joueur_Humain {
             Avatar.removeChild(Avatar.firstChild);
 
         let Avatar_J = document.createElement("img");
-        Avatar_J.setAttribute("src", "Images_Jeu_2/" + Image_avatar[A] + ".png");
+        Avatar_J.setAttribute("src", "img_pfc/" + Image_avatar[A] + ".png");
         Avatar_J.setAttribute("class", Image_avatar[A]);
 
         if (Image_avatar[A] == "joueur_4") {
-            Pierre_J.setAttribute("src", "Images_Jeu_2/pierre_c1.png");
-            Feuille_J.setAttribute("src", "Images_Jeu_2/feuille_c1.png");
-            Ciseaux_J.setAttribute("src", "Images_Jeu_2/ciseaux_c1.png");
+            Pierre_J.setAttribute("src", "img_pfc/pierre_c1.png");
+            Feuille_J.setAttribute("src", "img_pfc/feuille_c1.png");
+            Ciseaux_J.setAttribute("src", "img_pfc/ciseaux_c1.png");
         }
 
         else if (Image_avatar[A] == "joueur_3") {
-            Pierre_J.setAttribute("src", "Images_Jeu_2/pierre_c2.png");
-            Feuille_J.setAttribute("src", "Images_Jeu_2/feuille_c2.png");
-            Ciseaux_J.setAttribute("src", "Images_Jeu_2/ciseaux_c2.png");
+            Pierre_J.setAttribute("src", "img_pfc/pierre_c2.png");
+            Feuille_J.setAttribute("src", "img_pfc/feuille_c2.png");
+            Ciseaux_J.setAttribute("src", "img_pfc/ciseaux_c2.png");
         }
 
         else {
-            Pierre_J.setAttribute("src", "Images_Jeu_2/pierre.png");
-            Feuille_J.setAttribute("src", "Images_Jeu_2/feuille.png");
-            Ciseaux_J.setAttribute("src", "Images_Jeu_2/ciseaux.png");
+            Pierre_J.setAttribute("src", "img_pfc/pierre.png");
+            Feuille_J.setAttribute("src", "img_pfc/feuille.png");
+            Ciseaux_J.setAttribute("src", "img_pfc/ciseaux.png");
         }
 
         document.querySelector(".avatar_2").style.display = "none";
@@ -80,16 +80,16 @@ class Joueur_Humain {
     }
 }
 
-class Joueur_Tipep {
+class Joueur_Bot {
     constructor(Chance) {
         this.Chance = Chance;
     }
 
-    Choix_Tipep(Jeux, Joueur) {
+    Choix_Bot(Jeux, Joueur) {
         this.Chance = Math.floor(Math.random() * 1000) % 3;
 
         let Main_O = document.createElement("img");
-        Main_O.setAttribute("src", "Images_Jeu_2/" + Image_main[this.Chance] + "_tipep.png");
+        Main_O.setAttribute("src", "img_pfc/" + Image_main[this.Chance] + "_bot.png");
         Main_O.setAttribute("class", "new_img");
 
         Aire.appendChild(Main_O);
@@ -104,18 +104,18 @@ class Aire_De_Jeux {
         this.Description = Description;
     }
 
-    Score(Joueur, Tipep) {
+    Score(Joueur, Bot) {
         this.Description = document.querySelector(".description");
 
         if (Point_J == 3 || Point_O == 3) {
             return;
         }
 
-        if (Joueur.Choix == Tipep.Choix)
+        if (Joueur.Choix == Bot.Choix)
             this.Description.textContent = "Egalité";
 
         else {
-            if ((Joueur.Choix == 0 && Tipep.Choix == 2) || (Joueur.Choix == 2 && Tipep.Choix == 1) || (Joueur.Choix == 1 && Tipep.Choix == 0)) {
+            if ((Joueur.Choix == 0 && Bot.Choix == 2) || (Joueur.Choix == 2 && Bot.Choix == 1) || (Joueur.Choix == 1 && Bot.Choix == 0)) {
                 this.Description.textContent = Joueur.Nom + " gagne 1 point";
 
                 Point_J++;
@@ -128,12 +128,12 @@ class Aire_De_Jeux {
                 }
             }
             else {
-                this.Description.textContent = "TI'PEP gagne 1 point";
+                this.Description.textContent = "Le BOT gagne 1 point";
 
                 Point_O++;
 
                 if (Point_O == 3) {
-                    this.Description.textContent = "TI'PEP a remporte la partie";
+                    this.Description.textContent = "Le BOT a remporte la partie";
                     document.querySelector(".mains > .pierre").onclick = null;
                     document.querySelector(".mains > .feuille").onclick = null;
                     document.querySelector(".mains > .ciseaux").onclick = null;
@@ -148,5 +148,5 @@ class Aire_De_Jeux {
 
 const J = new Joueur_Humain();
 J.Nom_Joueur();
-const O = new Joueur_Tipep();
+const O = new Joueur_Bot();
 const A = new Aire_De_Jeux();

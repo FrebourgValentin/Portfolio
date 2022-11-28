@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
 .menu {
     text-align: center;
     display: grid;
@@ -33,7 +39,7 @@
 .plateau {
     text-align: center;
     display: grid;
-    grid-template-areas: 'joueur score tipep' 'joueur aire_jeux tipep';
+    grid-template-areas: 'joueur score bot' 'joueur aire_jeux bot';
     grid-template-columns: 250px 1fr 250px;
     grid-template-rows: 100px 1fr;
 }
@@ -57,8 +63,8 @@
     padding-top: 20px;
 }
 
-.tipep {
-    grid-area: tipep;
+.bot {
+    grid-area: bot;
     display: flex;
     flex-direction: column;
     align-items: center;
