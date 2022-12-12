@@ -2,7 +2,7 @@
 
 let rayon_sphere = 0;
 
-if (screen.width < 500) { // Responsivité de la sphere selon la largeur de l'écran
+if (screen.width < 500) {                                                                                         // Responsivité de la sphere selon la largeur de l'écran
   rayon_sphere = 150;
 }
 else {
@@ -10,9 +10,9 @@ else {
 }
 
 TagCloud(
-  ".sphere", // Emplacement de la sphere
-  ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Responsive Design','Wordpress'], // Tableau de texte
-  { radius: rayon_sphere, keep: true } // Rayon de la sphere en px, Interaction avec le curseur
+  ".sphere",                                                                                                      // Emplacement de la sphere
+  ['JavaScript','CSS','HTML','C','C++','MySQL', 'jQuery','SASS','Vue.js','PHP','Responsive Design','Wordpress'],  // Tableau de texte
+  { radius: rayon_sphere, keep: true }                                                                            // Rayon de la sphere en px, Interaction avec le curseur
 );
 
 /*====================== SECTION REALISATIONS ======================== */
