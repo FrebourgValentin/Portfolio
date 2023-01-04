@@ -78,6 +78,7 @@ html {
     grid-area: aire_jeux;
     display: flex;
     flex-direction: column;
+    padding: 1em;
     justify-content: space-around;
     color: rgb(70, 70, 70);
 }
@@ -134,5 +135,43 @@ html {
 @media screen and (max-width: 1200px) {
 	#a {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .plateau {
+        grid-template-areas: 'joueur' 'score' 'aire_jeux' 'bot';
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto 1fr;
+    }
+
+    .joueur, .bot {
+        padding-top: .5em;
+    }
+
+    .joueur_1, .joueur_2, .joueur_3, .joueur_4 {
+        width: 5em;
+        height: 5em;
+    }
+
+    .avatar {
+        margin: .5em;
+    }
+
+    .mains {
+        display: flex;
+    }
+
+    .mains img {
+        max-width: 6em;
+        padding-bottom: .5em;
+    }
+
+    .new_img {
+        max-width: 50%;
+    }
+
+    #a {
+        flex-direction: row;
     }
 }
