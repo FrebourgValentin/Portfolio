@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-	font-family: "Montserrat", sans-serif;
+html {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2em;
 }
 
 .menu {
@@ -10,10 +11,9 @@
     grid-template-areas: 'new avatar_1' 'avatar_2 avatar_2';
     background: #00529c;
     color: white;
-    font-size: 1.2em;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 15px;
+    padding: .6em;
+    margin-bottom: .6em;
+    border-radius: .6em;
 }
 
 .avatar_1 {
@@ -40,16 +40,16 @@
     text-align: center;
     display: grid;
     grid-template-areas: 'joueur score bot' 'joueur aire_jeux bot';
-    grid-template-columns: 250px 1fr 250px;
-    grid-template-rows: 100px 1fr;
+    grid-template-columns: 15em 1fr 15em;
+    grid-template-rows: 8em 1fr;
 }
 
 .score {
     grid-area: score;
-    border-radius: 15px;
+    border-radius: .6em;
     color: rgb(70, 70, 70);
     margin: auto;
-    font-size: 30px;
+    font-size: 3em;
 }
 
 .joueur {
@@ -57,10 +57,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
+    border-radius: .6em;
     border: solid 3px #00529c;
     color: rgb(70, 70, 70);
-    padding-top: 20px;
+    padding-top: 1em;
 }
 
 .bot {
@@ -68,10 +68,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
+    border-radius: .6em;
     border: solid 3px #00529c;
     color: rgb(70, 70, 70);
-    padding-top: 20px;
+    padding-top: 1em;
 }
 
 .aire_jeux {
@@ -79,7 +79,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border-radius: 15px;
     color: rgb(70, 70, 70);
 }
 
@@ -88,25 +87,19 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    max-width: 200px;
-}
-
-.message {
-    font-size: 1.2em;
-    margin-left: -50px;
-    margin-right: -50px;
+    max-width: 15em;
 }
 
 .avatar {
-    margin: 20px;
-    padding: 10px;
+    margin: 1em;
+    padding: .8em;
     background: #00529c;
-    border-radius: 15px;
+    border-radius: .8em;
 }
 
 .mains img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 10em;
+    max-height: 10em;
 }
 
 .avatar_1, .new, .retour{
@@ -118,15 +111,15 @@
 }
 
 .joueur_1, .joueur_2, .joueur_3, .joueur_4 {
-    width: 150px;
-    height: 150px;
+    width: 8em;
+    height: 8em;
 }
 
 .avatar_2 img {
     border: solid 3px white;
-    border-radius: 15px;
-    margin: 10px;
-    padding: 10px;
+    border-radius: .8em;
+    margin: .8em;
+    padding: .8em;
 }
 
 .avatar_2 img:hover {
@@ -136,4 +129,10 @@
 .retour, .retour:hover {
     color: white;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+	#a {
+        flex-direction: column;
+    }
 }
