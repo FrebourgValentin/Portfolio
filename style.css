@@ -16,7 +16,7 @@ h5 {
     text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .2em;
-	padding: 1em;
+	padding: 2.5em;
 }
 
 /*====================== SECTION ACCUEIL ======================== */
@@ -57,16 +57,17 @@ h5 {
 	overflow: hidden;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 #accueil #menu a {
 	float: left;
 	display: block;
 	text-decoration: none;
-	color: white;
+	color: #fff;
 	text-align: center;
 	padding: 1em;
+	font-weight: 600;
 }
 
 #accueil #menu a:hover {
