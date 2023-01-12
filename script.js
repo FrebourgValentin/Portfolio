@@ -54,14 +54,14 @@ blocs.forEach(bloc => bloc.addEventListener("click", Animation_Slide));
 /*====================== MENU ======================== */
     
 var menu = document.getElementById("menu");
-var sticky = menu.offsetTop;
+var espace = menu.offsetTop;                    // Distance entre la bordure haute du menu et la bordure haute de la fenêtre
 
 function Menu_Scroll() {
-  if (window.pageYOffset >= sticky) {
-    menu.classList.add("sticky")
+  if (window.innerWidth >= 620 && window.scrollY >= espace) {   
+    menu.classList.add("fixe");
   } 
   else {
-    menu.classList.remove("sticky");
+    menu.classList.remove("fixe");
   }
 }
 

@@ -54,7 +54,6 @@ h5 {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(1em);
-	overflow: hidden;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -75,7 +74,7 @@ h5 {
     color: black;
 }
 
-#accueil .sticky {
+#accueil .fixe {
 	position: fixed;
 	top: 0;
 }
