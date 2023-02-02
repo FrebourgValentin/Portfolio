@@ -11,7 +11,7 @@ else {
 
 TagCloud(
   ".sphere",                                                                                                                // Emplacement de la sphere
-  ['JavaScript','CSS','HTML','C','C++','MySQL','jQuery','SASS','Vue.js','Node.js','PHP','Responsive Design','Wordpress'],   // Tableau de texte
+  ['JavaScript','CSS','HTML','C','C++','MySQL','jQuery','SCSS','Vue.js','Node.js','Angular','TypeScript','PHP','Responsive Design','Wordpress'],   // Tableau de texte
   { radius: rayon_sphere, keep: true }                                                                                      // Rayon de la sphere en px, Interaction avec le curseur
 );
 
@@ -54,10 +54,10 @@ blocs.forEach(bloc => bloc.addEventListener("click", Animation_Slide));
 /*====================== MENU ======================== */
     
 var menu = document.getElementById("menu");
-var espace = menu.offsetTop;                    // Distance entre la bordure haute du menu et la bordure haute de la fenêtre
+var espace = menu.offsetTop;                                                                                                  // Distance entre la bordure haute du menu et la bordure haute de la fenêtre
 
 function Menu_Scroll() {
-  if (window.innerWidth >= 620 && window.scrollY >= espace) {   
+  if (window.innerWidth >= 768 && window.scrollY >= espace) {   
     menu.classList.add("fixe");
   } 
   else {

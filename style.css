@@ -51,22 +51,22 @@ h5 {
 
 #accueil #menu {
 	z-index: 2;
-	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(1em);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	text-transform: uppercase;
+	overflow: auto;
 }
 
 #accueil #menu a {
 	float: left;
-	display: block;
 	text-decoration: none;
 	color: #fff;
 	text-align: center;
-	padding: 1em;
+	width: 20%;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	font-weight: 600;
+	transition: 0.3s linear;
 }
 
 #accueil #menu a:hover {
@@ -74,9 +74,104 @@ h5 {
     color: black;
 }
 
+#accueil #menu #barre_gauche {
+	position: absolute;
+	left: 0;
+	width: .5em;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0;
+	transition: 0.3s ease left;
+}
+
+#accueil #menu a:nth-child(1):hover ~ #barre_gauche {
+	background: linear-gradient(130deg, yellow, red);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(2):hover ~ #barre_gauche {
+	left: 20%;
+	background: linear-gradient(130deg, #00e2ff, #89ff00);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(3):hover ~ #barre_gauche {
+	left: 40%;
+	background: linear-gradient(130deg, purple, palevioletred);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(4):hover ~ #barre_gauche {
+	left: 60%;
+	background: linear-gradient(130deg, yellow, red);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(5):hover ~ #barre_gauche {
+	left: 80%;
+	background: linear-gradient(130deg, #00e2ff, #89ff00);
+	opacity: 1;
+}
+
+#accueil #menu #barre_droite {
+	position: absolute;
+	right: 0;
+	width: .5em;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0;
+	transition: 0.3s ease right;
+}
+
+#accueil #menu a:nth-child(1):hover ~ #barre_droite {
+	right: 80%;
+	background: linear-gradient(130deg, yellow, red);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(2):hover ~ #barre_droite {
+	right: 60%;
+	background: linear-gradient(130deg, #00e2ff, #89ff00);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(3):hover ~ #barre_droite {
+	right: 40%;
+	background: linear-gradient(130deg, purple, palevioletred);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(4):hover ~ #barre_droite {
+	right: 20%;
+	background: linear-gradient(130deg, yellow, red);
+	opacity: 1;
+}
+
+#accueil #menu a:nth-child(5):hover ~ #barre_droite {
+	background: linear-gradient(130deg, #00e2ff, #89ff00);
+	opacity: 1;
+}
+
 #accueil .fixe {
 	position: fixed;
 	top: 0;
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	#accueil #menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	#accueil #menu a {
+		width: 10em;
+	}
+
+	#accueil #menu #barre_gauche, #accueil #menu #barre_droite {
+		visibility: hidden;
+	}
 }
 
 /*====================== SECTION COMPETENCES ======================== */
@@ -347,7 +442,7 @@ h5 {
 
 @media only screen and (max-width: 768px) {
 	#realisations .slider {
-		height: 60em;
+		height: 100vh;
 	}
 	
 	#realisations .slider .box {
