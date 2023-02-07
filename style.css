@@ -34,6 +34,10 @@ h5 {
 	margin: auto;	
 }
 
+#accueil #intro h5 {
+    padding: 1em;
+}
+
 #accueil #intro h1 {
     font-size: 3em;
     color: #fff;
@@ -81,7 +85,7 @@ h5 {
 	height: 100%;
 	background-color: #fff;
 	opacity: 0;
-	transition: 0.3s ease left;
+	transition: 0.3s ease;
 }
 
 #accueil #menu a:nth-child(1):hover ~ #barre_gauche {
@@ -120,7 +124,7 @@ h5 {
 	height: 100%;
 	background-color: #fff;
 	opacity: 0;
-	transition: 0.3s ease right;
+	transition: 0.3s ease;
 }
 
 #accueil #menu a:nth-child(1):hover ~ #barre_droite {
@@ -232,7 +236,7 @@ h5 {
 #parcours .ligne, #experience .ligne {
 	position: absolute;
 	width: .4em;
-	background-color: white;
+	background-color: #fff;
 	border-radius: 1em;
 	top: 2.5em;
 	bottom: 4em;
@@ -254,7 +258,7 @@ h5 {
 	position: absolute;
 	width: 2em;
 	height: 2em;
-	background-color: white;
+	background-color: #fff;
 	border: 4px solid #1c98ed;
 	border-radius: 1em;
 	right: -1em;
@@ -266,7 +270,7 @@ h5 {
 
 #parcours .texte, #experience .texte {
 	padding: 1.2em;
-	background-color: white;
+	background-color: #fff;
 	color: #313131;
 	position: relative;
 	border-radius: .8em;
@@ -471,8 +475,7 @@ h5 {
 	}
 
 	#realisations .slider .illustration img {
-		width: 16em;
-		padding-top: 4em;
+		width: 10em;
 	}
 
 	#realisations .blocs {
@@ -491,7 +494,7 @@ h5 {
 }
 
 #contact .conteneur {
-	color: white;
+	color: #fff;
 	padding: 1em;
 	display: flex;
 	flex-direction: row;
@@ -531,5 +534,5 @@ footer {
 	background: #313131;
 	color: #fff;
 	text-align: center;
-	padding: .5em;
+	padding: .4em;
 }
