@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet/scss" type="text/css" href="test.scss">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+
+    <title>Portfolio - Frébourg Valentin</title>
+</head>
+
+<body>
+    <section id="accueil">
+        <div id="intro">
+            <h5>Bonjour,</h5>
+            <h1>Je suis Valentin Frébourg</h1>
+            <p>Développeur Front End | Développeur Full Stack</p>
+        </div>
+
+        <!-- <div id="menu">
+            <a href="#competences">Compétences</a>
+            <a href="#parcours">Parcours</a>
+            <a href="#experience">Expériences</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#contact">Contact</a>
+            <div id="barre_gauche"></div>
+            <div id="barre_droite"></div>
+        </div> -->
+
+        <div id="menu">
+            <a href="#competences">Compétences</a>
+            <a href="#parcours">Parcours</a>
+            <a href="#experience">Expériences</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#contact">Contact</a>
+            <div id="barre_gauche"></div>
+            <div id="barre_droite"></div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h5>Compétences</h5>
+
+        <div class="conteneur">
+            <div>
+                <h2>Compétences techniques</h2>
+                <span class="sphere"></span>
+            </div>
+
+            <div>
+                <h2>Outils / Logiciels</h2>
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>Sublime Text</li>
+                    <li>GitHub</li>
+                    <li>Suite Office</li>
+                    <li>Suite Adobe</li>
+                </ul>
+            </div>
+        </div>
+	</section>
+
+    <section id="parcours">
+        <h5>Parcours</h5>
+
+        <div class="conteneur">
+            <div class="ligne"></div>
+
+            <div class="bloc_gauche">
+                <div class="point_gauche"></div>
+
+                <div class="texte">
+                    <h2>2022</h2>
+                    <h2>LP UX2I (Licence Professionnelle User Experience Integration Interface)</h2>
+                    <p>Diplôme obtenu à l'IUT de Blois (Université de Tours).</p>
+                </div>
+            </div>
+
+            <div class="bloc_droite">
+                <div class="point_droite"></div>
+
+                <div class="texte">
+                    <h2>2021</h2>
+                    <h2>BTS SNIR (Brevet de Technicien Supérieur Systèmes Numériques option Informatique et Réseaux)</h2>
+                    <p>Diplôme obtenu au lycée Edouard Branly à Dreux.</p>
+                </div>
+            </div>
+
+            <div class="bloc_gauche">
+                <div class="point_gauche"></div>
+
+                <div class="texte">
+                    <h2>2019</h2>
+                    <h2>Baccalauréat Scientifique</h2>
+                    <p>Diplôme obtenu au lycée Rémi Belleau à Nogent-Le-Rotrou.</p>
+                </div>
+            </div>
+        </div>
+	</section>
+
+    <section id="experience">
+        <h5>Expériences</h5>
+
+        <div class="conteneur">
+            <div class="ligne"></div>
+
+            <div class="bloc_droite">
+                <div class="point_droite"></div>
+
+                <div class="texte">
+                    <h2>7 Mars 2022 - 24 Juin 2022</h2>
+                    <h2>Stage - Service communication à l'ADPEP28</h2>
+                    <p>Réalisation d'une page "Aire de jeux" sur le site de l'association, création d'une application avec Power Apps, utilisation de Power Automate pour la mise en place du publipostage avec les logiciels de Microsoft.</p>
+                </div>
+            </div>
+
+            <div class="bloc_gauche">
+                <div class="point_gauche"></div>
+
+                <div class="texte">
+                    <h2>23 Novembre 2020 - 18 Décembre 2020</h2>
+                    <h2>Stage - Service informatique à l'ADPEP28</h2>
+                    <p>Dépannage de PC, assistance aux utilisateurs, mise à niveau de PC, utilisation de GLPI et de OGiRYS.</p>
+                </div>
+            </div>
+        </div>
+	</section>
+
+    <section id="realisations">
+        <h5>Réalisations</h5>
+
+        <div class="slider">
+            <div class="projet_1 box">
+                <div class="background"></div>
+                <div class="details">
+                    <h2>2022<br>Quiz</h2>
+                    <p>Quiz chronométré à 5 questions sur le thème de la série télévisée "Doctor Who".</p>
+                    <a href="realisations/Quiz/Quiz.html">VOIR</a>
+                </div>
+    
+                <div class="illustration">
+                    <img src="img/quiz.svg">
+                </div>
+            </div>
+    
+            <div class="projet_2 box">
+                <div class="background"></div>
+                <div class="details">
+                    <h2>2021<br>Pierre-Feuille-Ciseaux</h2>
+                    <p>Petit jeu où le premier qui obtient 3 points remporte la partie.<br>Les règles sont simples :<br>- La pierre gagne face aux ciseaux<br>- Les ciseaux l'emportent face à la feuille<br>- La feuille bat la pierre</p>
+                    <a href="realisations/PFC/PFC.html">VOIR</a>
+                </div>
+    
+                <div class="illustration">
+                    <img src="img/chifoumi.svg">
+                </div>
+            </div>
+    
+            <div class="projet_3 box">
+                <div class="background"></div>
+                <div class="details">
+                    <h2>2022<br>Projet Centre Commercial Blois 2 - LP UX2I</h2>
+                    <p>Conception d'un site internet en équipe de 3.<br>Le projet a pour but de diversifier la communication de la galerie marchande et de la zone commerciale Blois 2 en réalisant un site.<br>Pour cela, il a fallu passer par plusieurs étapes : Etat des lieux, veille concurrentielle, analyse des cibles, charte graphique, communications sur les réseaux sociaux, réflexion UX, maquettage et conception du site.</p>
+                </div>
+    
+                <div class="illustration">
+                    <img src="img/centre_commercial.svg">
+                </div>
+            </div>
+    
+            <div class="projet_4 box">
+                <div class="background"></div>
+                <div class="details">
+                    <h2>2021<br>Projet Escape Game - BTS SNIR</h2>
+                    <p>Création d'un Escape Game programmé en C++ en équipe de 4.<br>Le projet consistait à développer une application permettant à l'entreprise de créer des scénarios à partir d'un catalogue de jeux d'énigmes. Ces jeux sont constitués de cartes ARDUINO associées à des capteurs et actionneurs.</p>
+                </div>
+    
+                <div class="illustration">
+                    <img src="img/escape_game.svg">
+                </div>
+            </div>
+    
+            <div class="projet_5 box">
+                <div class="background"></div>
+                <div class="details">
+                    <h2>Décembre 2017<br>Participation d'un concours "24h pour le Net Plus Ultr@ !"</h2>
+                    <p>Réalisation de mon premier site internet en équipe de 3 sur un sujet donné.<br>Le thème de cette année était : « De Stonehenge au télescope Hubble, en passant par la lunette de Galilée, ou quand l’humanité cherche sa place dans l’univers. »<br>Le site est optimisé pour être visualisé avec une résolution d'écran de 1024 par 768.</p>
+                    <a href="https://24hnet.remibelleau.com/2017/equipe02/index.htm">VOIR</a>
+                </div>
+                
+                <div class="illustration">
+                    <img src="img/telescope.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="blocs">
+            <div class="bloc_1 active">1</div>
+            <div class="bloc_2">2</div>
+            <div class="bloc_3">3</div>
+            <div class="bloc_4">4</div>
+            <div class="bloc_5">5</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h5>Contact</h5>
+        
+        <div class="conteneur">
+            <div>
+                <img src="img/phone.png">
+                <h2>Téléphone</h2>
+                <p>06 70 69 48 03</p>
+            </div>
+
+            <div>
+                <img src="img/email.png">
+                <h2>Email</h2>
+                <p>valfrebourg2016@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>Images by Freepik / Unsplash</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
