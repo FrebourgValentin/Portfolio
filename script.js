@@ -2,7 +2,7 @@
 
 let rayon_sphere = 0;
 
-if (screen.width < 500) {                                                                                                   // Responsivité de la sphere selon la largeur de l'écran
+if (screen.width < 500) { // Responsivité de la sphere selon la largeur de l'écran
   rayon_sphere = 150;
 }
 else {
@@ -10,9 +10,9 @@ else {
 }
 
 TagCloud(
-  ".sphere",                                                                                                                // Emplacement de la sphere
-  ['JavaScript','CSS','HTML','C','C++','MySQL','jQuery','SCSS','Vue.js','Node.js','Angular','TypeScript','PHP','Responsive Design','Wordpress'],   // Tableau de texte
-  { radius: rayon_sphere, keep: true }                                                                                      // Rayon de la sphere en px, Interaction avec le curseur
+  ".sphere", // Emplacement de la sphere
+  ['JavaScript','CSS','HTML','C','C++','MySQL','jQuery','SCSS','Vue.js','Node.js','Angular','TypeScript','PHP','Responsive Design'], // Tableau de texte
+  { radius: rayon_sphere, keep: true } // Rayon de la sphere en px, Interaction avec le curseur
 );
 
 /*====================== SECTION REALISATIONS ======================== */
@@ -50,19 +50,3 @@ function Animation_Slide() {
 };
 
 blocs.forEach(bloc => bloc.addEventListener("click", Animation_Slide));
-
-/*====================== MENU ======================== */
-    
-var menu = document.getElementById("menu");
-var espace = menu.offsetTop;                                                                                                  // Distance entre la bordure haute du menu et la bordure haute de la fenêtre
-
-function Menu_Scroll() {
-  if (window.innerWidth >= 768 && window.scrollY >= espace) {   
-    menu.classList.add("fixe");
-  } 
-  else {
-    menu.classList.remove("fixe");
-  }
-}
-
-window.onscroll = function() {Menu_Scroll()};

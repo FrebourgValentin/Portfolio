@@ -10,13 +10,14 @@
 }
 
 h5 {
-    font-size: 1.6em;
+	font-size: 1.6em;
 	font-weight: 600;
-    color: #ff4500;
-    text-transform: uppercase;
+	color: #ff4500;
+	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .2em;
-	padding: 2.5em;
+	padding-top: 2.5em;
+	padding-bottom: 1em;
 }
 
 /*====================== SECTION ACCUEIL ======================== */
@@ -27,41 +28,43 @@ h5 {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
+	justify-content: center;
 }
 
-#accueil #intro {
-	margin: auto;	
-}
-
-#accueil #intro h5 {
-    padding: 1em;
-}
-
-#accueil #intro h1 {
-    font-size: 3em;
-    color: #fff;
-    margin: 0 .5em .5em .5em;
+#accueil h1 {
+	font-size: 3em;
+	color: #fff;
+	margin: 0 .5em .5em .5em;
 	text-align: center;
+	transition: 0.2s linear;
 }
 
-#accueil #intro p {
-    font-size: 1em;
-    color: #fff;
-	text-transform: uppercase;
+#accueil h1:hover {
+	text-shadow: #1c98ed 4px 4px;
+}
+
+
+#accueil p {
+	font-size: 1em;
+	color: #fff;
 	letter-spacing: .2em;
 	text-align: center;
+	text-transform: uppercase;
 }
 
-#accueil #menu {
+/*====================== SECTION MENU ======================== */
+
+#menu {
 	z-index: 2;
 	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(1em);
 	text-transform: uppercase;
 	overflow: auto;
+	position: sticky;
+	top: 0;
 }
 
-#accueil #menu a {
+#menu a {
 	float: left;
 	text-decoration: none;
 	color: #fff;
@@ -70,111 +73,28 @@ h5 {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	font-weight: 600;
-	transition: 0.3s linear;
+	transition: 0.2s linear;
+	margin: auto;
+	outline: 0px solid #1c98ed;
+	outline-offset: 0px;
 }
 
-#accueil #menu a:hover {
+#menu a:hover {
 	background-color: #ddd;
-    color: black;
-}
-
-#accueil #menu #barre_gauche {
-	position: absolute;
-	left: 0;
-	width: .5em;
-	height: 100%;
-	background-color: #fff;
-	opacity: 0;
-	transition: 0.3s ease;
-}
-
-#accueil #menu a:nth-child(1):hover ~ #barre_gauche {
-	background: linear-gradient(130deg, yellow, red);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(2):hover ~ #barre_gauche {
-	left: 20%;
-	background: linear-gradient(130deg, #00e2ff, #89ff00);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(3):hover ~ #barre_gauche {
-	left: 40%;
-	background: linear-gradient(130deg, purple, palevioletred);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(4):hover ~ #barre_gauche {
-	left: 60%;
-	background: linear-gradient(130deg, yellow, red);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(5):hover ~ #barre_gauche {
-	left: 80%;
-	background: linear-gradient(130deg, #00e2ff, #89ff00);
-	opacity: 1;
-}
-
-#accueil #menu #barre_droite {
-	position: absolute;
-	right: 0;
-	width: .5em;
-	height: 100%;
-	background-color: #fff;
-	opacity: 0;
-	transition: 0.3s ease;
-}
-
-#accueil #menu a:nth-child(1):hover ~ #barre_droite {
-	right: 80%;
-	background: linear-gradient(130deg, yellow, red);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(2):hover ~ #barre_droite {
-	right: 60%;
-	background: linear-gradient(130deg, #00e2ff, #89ff00);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(3):hover ~ #barre_droite {
-	right: 40%;
-	background: linear-gradient(130deg, purple, palevioletred);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(4):hover ~ #barre_droite {
-	right: 20%;
-	background: linear-gradient(130deg, yellow, red);
-	opacity: 1;
-}
-
-#accueil #menu a:nth-child(5):hover ~ #barre_droite {
-	background: linear-gradient(130deg, #00e2ff, #89ff00);
-	opacity: 1;
-}
-
-#accueil .fixe {
-	position: fixed;
-	top: 0;
-	width: 100%;
+	color: black;
+	outline: 6px solid #1c98ed;
+	outline-offset: -5px;
 }
 
 @media screen and (max-width: 768px) {
-	#accueil #menu {
+	#menu {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	}
 
-	#accueil #menu a {
+	#menu a {
 		width: 10em;
-	}
-
-	#accueil #menu #barre_gauche, #accueil #menu #barre_droite {
-		visibility: hidden;
 	}
 }
 
@@ -202,6 +122,7 @@ h5 {
 }
 
 #competences .tagcloud {
+	z-index: 0;
 	color: #313131;
 	font-weight: 500;
 	margin: auto;
@@ -210,6 +131,7 @@ h5 {
 #competences .tagcloud--item:hover {
 	color: #1c98ed;
 	font-weight: 700;
+	cursor: default;
 }
 
 @media screen and (max-width: 768px) {
@@ -222,18 +144,21 @@ h5 {
 
 /*====================== SECTION PARCOURS / EXPERIENCE ======================== */
 
-#parcours, #experience {
+#parcours,
+#experience {
 	background: #313131;
 }
 
-#parcours .conteneur, #experience .conteneur {
+#parcours .conteneur,
+#experience .conteneur {
 	position: relative;
 	max-width: 90em;
 	margin: auto;
 	padding-bottom: 2em;
 }
 
-#parcours .ligne, #experience .ligne {
+#parcours .ligne,
+#experience .ligne {
 	position: absolute;
 	width: .4em;
 	background-color: #fff;
@@ -244,17 +169,24 @@ h5 {
 	margin-left: -.2em;
 }
 
-#parcours .bloc_gauche, #parcours .bloc_droite, #experience .bloc_gauche, #experience .bloc_droite {
+#parcours .bloc_gauche,
+#parcours .bloc_droite,
+#experience .bloc_gauche,
+#experience .bloc_droite {
 	padding: 2em;
 	position: relative;
 	width: 50%;
 }
 
-#parcours .bloc_droite, #experience .bloc_droite {
+#parcours .bloc_droite,
+#experience .bloc_droite {
 	left: 50%;
 }
 
-#parcours .point_gauche, #parcours .point_droite, #experience .point_gauche, #experience .point_droite {
+#parcours .point_gauche,
+#parcours .point_droite,
+#experience .point_gauche,
+#experience .point_droite {
 	position: absolute;
 	width: 2em;
 	height: 2em;
@@ -264,11 +196,13 @@ h5 {
 	right: -1em;
 }
 
-#parcours .point_droite, #experience .point_droite {
+#parcours .point_droite,
+#experience .point_droite {
 	left: -1em;
 }
 
-#parcours .texte, #experience .texte {
+#parcours .texte,
+#experience .texte {
 	padding: 1.2em;
 	background-color: #fff;
 	color: #313131;
@@ -276,26 +210,36 @@ h5 {
 	border-radius: .8em;
 }
 
-#parcours h2, #experience h2 {
-    font-size: 1.2em;
-    margin-bottom: .8em;
+#parcours h2,
+#experience h2 {
+	font-size: 1.2em;
+	margin-bottom: .8em;
 }
 
 @media screen and (max-width: 768px) {
-	#parcours .ligne, #experience .ligne {
+
+	#parcours .ligne,
+	#experience .ligne {
 		left: 2em;
 	}
 
-	#parcours .bloc_gauche, #parcours .bloc_droite, #experience .bloc_gauche, #experience .bloc_droite {
+	#parcours .bloc_gauche,
+	#parcours .bloc_droite,
+	#experience .bloc_gauche,
+	#experience .bloc_droite {
 		width: 100%;
 		padding-left: 4em;
 	}
 
-	#parcours .point_gauche, #parcours .point_droite, #experience .point_gauche, #experience .point_droite {
+	#parcours .point_gauche,
+	#parcours .point_droite,
+	#experience .point_gauche,
+	#experience .point_droite {
 		left: 1em;
 	}
 
-	#parcours .bloc_droite, #experience .bloc_droite {
+	#parcours .bloc_droite,
+	#experience .bloc_droite {
 		left: 0;
 	}
 }
@@ -353,7 +297,7 @@ h5 {
 #realisations .slider .box .details {
 	padding-left: 20%;
 	padding-right: 3em;
-	z-index: 1;
+	z-index: 0;
 	grid-column: 1 / span 1;
 	grid-row: 1 / -1;
 }
@@ -369,15 +313,15 @@ h5 {
 	color: #313131;
 	background-color: #fff;
 	border: .2em solid #1c98ed;
-    border-radius: 10px;
+	border-radius: 10px;
 	padding: .5em 2em;
-    text-align: center;
+	text-align: center;
 	text-decoration: none;
 }
 
 #realisations a:hover {
 	color: white;
-    background-color: #1c98ed;
+	background-color: #1c98ed;
 	cursor: pointer;
 }
 
@@ -422,7 +366,7 @@ h5 {
 	gap: 1em;
 	text-align: center;
 	font-size: 2em;
-	z-index: 1;
+	z-index: 0;
 	position: absolute;
 }
 
@@ -448,7 +392,7 @@ h5 {
 	#realisations .slider {
 		height: 100vh;
 	}
-	
+
 	#realisations .slider .box {
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(2, 1fr);
@@ -484,7 +428,7 @@ h5 {
 		gap: 0em;
 	}
 }
-  
+
 /*====================== SECTION CONTACT ======================== */
 
 #contact {
@@ -514,17 +458,13 @@ h5 {
 }
 
 #contact p {
-	padding-bottom: 2em;
+	padding-bottom: 4em;
 }
 
 @media screen and (max-width: 768px) {
 	#contact .conteneur {
 		flex-direction: column;
 		align-items: center;
-	}
-
-	#contact p {
-		padding-bottom: 4em;
 	}
 }
 
