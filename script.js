@@ -1,3 +1,9 @@
+/*====================== SECTION MENU =============================== */
+
+function Unzoom_Menu() {
+  document.getElementById("active").checked = false;
+}
+
 /*====================== SECTION COMPETENCES ======================== */
 
 let rayon_sphere = 0;
@@ -11,7 +17,7 @@ else {
 
 TagCloud(
   ".sphere", // Emplacement de la sphere
-  ['JavaScript','CSS','HTML','C','C++','MySQL','jQuery','SCSS','Vue.js','Node.js','Angular','TypeScript','PHP','Responsive Design'], // Tableau de texte
+  ['JavaScript','CSS','HTML','C','C++','MySQL','jQuery','SCSS','Vue.js','Node.js','Angular','React','TypeScript','PHP','Responsive Design'], // Tableau de texte
   { radius: rayon_sphere, keep: true } // Rayon de la sphere en px, Interaction avec le curseur
 );
 

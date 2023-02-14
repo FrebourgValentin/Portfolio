@@ -48,6 +48,7 @@ h5 {
 	font-size: 1em;
 	color: #fff;
 	letter-spacing: .2em;
+	padding: 1em;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -62,6 +63,7 @@ h5 {
 	overflow: auto;
 	position: sticky;
 	top: 0;
+	transition: all 0.4s ease-in-out;
 }
 
 #menu a {
@@ -86,15 +88,75 @@ h5 {
 	outline-offset: -5px;
 }
 
+.menu_btn {
+	z-index: 3;
+	display: none;
+	position: fixed;
+	top: 0;
+	height: 4em;
+	width: 4em;
+	padding: 1em;
+	border-radius: 0 0 4em 0;
+	color: #fff;
+	cursor: pointer;
+	background: #ff4500;
+}
+
+#active:checked~.menu_btn {
+	background: #1c98ed;
+}
+
+.menu_btn i {
+	font-size: 1.4em;
+}
+
+#active:checked~.menu_btn i:before {
+	background: #1c98ed;
+	content: "\f00d";
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
 @media screen and (max-width: 768px) {
 	#menu {
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: column;
 		justify-content: space-around;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		clip-path: circle(4em at 0 0);
 	}
 
 	#menu a {
-		width: 10em;
+		width: 60%;
+		font-size: 2em;
+	}
+
+	#menu a,
+	#menu a:hover {
+		border-radius: 1em;
+	}
+
+	.menu_btn {
+		display: inline;
+	}
+
+	#active:checked~#menu {
+		clip-path: circle(75%);
+	}
+
+	@keyframes rotate {
+		0% {
+			filter: hue-rotate(0deg);
+		}
+
+		100% {
+			filter: hue-rotate(360deg);
+		}
 	}
 }
 

@@ -9,6 +9,7 @@
     
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d57fc545db.js"></script>
 
     <title>Portfolio - Frébourg Valentin</title>
 </head>
@@ -20,14 +21,16 @@
         <p>Développeur Front End | Développeur Full Stack</p>
     </section>
 
+    <input type="checkbox" id="active">
+    <label for="active" class="menu_btn">
+        <i class="fa-solid fa-bars"></i>
+    </label>
     <section id="menu">
-        <a href="#competences">Compétences</a>
-        <a href="#parcours">Parcours</a>
-        <a href="#experience">Expériences</a>
-        <a href="#realisations">Réalisations</a>
-        <a href="#contact">Contact</a>
-        <div id="barre_gauche"></div>
-        <div id="barre_droite"></div>
+        <a href="#competences" onclick="Unzoom_Menu()">Compétences</a>
+        <a href="#parcours" onclick="Unzoom_Menu()">Parcours</a>
+        <a href="#experience" onclick="Unzoom_Menu()">Expériences</a>
+        <a href="#realisations" onclick="Unzoom_Menu()">Réalisations</a>
+        <a href="#contact" onclick="Unzoom_Menu()">Contact</a>
     </section>
 
     <section id="competences">
