@@ -34,7 +34,7 @@ h5 {
 #accueil h1 {
 	font-size: 3em;
 	color: #fff;
-	margin: 0 .5em .5em .5em;
+	margin: 0 auto .5em auto;
 	text-align: center;
 	transition: 0.2s linear;
 }
