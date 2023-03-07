@@ -10,14 +10,19 @@
 }
 
 h5 {
-	font-size: 1.6em;
+	font-size: 1.8em;
 	font-weight: 600;
 	color: #ff4500;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: .2em;
-	padding-top: 2.5em;
-	padding-bottom: 1em;
+	padding: 3em 0 2em 0;
+}
+
+@media screen and (max-width: 768px) {
+	h5 {
+		padding: 2em 0 1em 0;
+	}
 }
 
 /*====================== SECTION ACCUEIL ======================== */
@@ -42,7 +47,6 @@ h5 {
 #accueil h1:hover {
 	text-shadow: #1c98ed 4px 4px;
 }
-
 
 #accueil p {
 	font-size: 1em;
@@ -72,8 +76,7 @@ h5 {
 	color: #fff;
 	text-align: center;
 	width: 20%;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding: 1em 0 1em 0;
 	font-weight: 600;
 	transition: 0.2s linear;
 	margin: auto;
@@ -162,6 +165,10 @@ input[type="checkbox"] {
 
 /*====================== SECTION COMPETENCES ======================== */
 
+#competences {
+	background: #fff;
+}
+
 #competences .conteneur {
 	color: #313131;
 	padding: 1em;
@@ -180,7 +187,7 @@ input[type="checkbox"] {
 
 #competences h2 {
 	text-align: center;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 }
 
 #competences .tagcloud {
@@ -205,11 +212,6 @@ input[type="checkbox"] {
 }
 
 /*====================== SECTION PARCOURS / EXPERIENCE ======================== */
-
-#parcours,
-#experience {
-	background: #313131;
-}
 
 #parcours .conteneur,
 #experience .conteneur {
@@ -278,6 +280,36 @@ input[type="checkbox"] {
 	margin-bottom: .8em;
 }
 
+#parcours .diagonal {
+	animation: animation_diagonal 9s ease-in-out infinite alternate;
+	background-image: linear-gradient(60deg, #313131 50%, #444444 50%);
+	bottom: 0;
+	top: 0;
+	left: -50%;
+	right: -50%;
+	opacity: .5;
+	position: fixed;
+	z-index: -1;
+}
+
+#parcours .diagonal_2 {
+	animation-duration: 12s;
+}
+
+#parcours .diagonal_3 {
+	animation-duration: 15s;
+}
+
+@keyframes animation_diagonal {
+	0% {
+		transform: translateX(-25%);
+	}
+
+	100% {
+		transform: translateX(25%);
+	}
+}
+  
 @media screen and (max-width: 768px) {
 
 	#parcours .ligne,
@@ -357,16 +389,14 @@ input[type="checkbox"] {
 }
 
 #realisations .slider .box .details {
-	padding-left: 20%;
-	padding-right: 3em;
+	padding: 0 3em 0 20%;
 	z-index: 0;
 	grid-column: 1 / span 1;
 	grid-row: 1 / -1;
 }
 
 #realisations .slider .box .details p {
-	padding-top: 1em;
-	padding-bottom: 2em;
+	padding: 1em 0 2em 0;
 }
 
 #realisations a {
@@ -509,14 +539,13 @@ input[type="checkbox"] {
 }
 
 #contact img {
-	margin-bottom: 1em;
 	height: 4em;
 	width: 4em;
 	filter: invert(100%);
 }
 
 #contact h2 {
-	padding-bottom: 1em;
+	padding: 1em;
 }
 
 #contact p {
