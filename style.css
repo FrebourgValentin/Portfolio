@@ -558,12 +558,3 @@ input[type="checkbox"] {
 		align-items: center;
 	}
 }
-
-/*====================== FOOTER ======================== */
-
-footer {
-	background: #313131;
-	color: #fff;
-	text-align: center;
-	padding: .4em;
-}
