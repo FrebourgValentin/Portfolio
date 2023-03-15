@@ -9,11 +9,6 @@ $(document).ready(function () {
     $(".barre_2").hide();
     $(".sablier").hide();
 
-    $(".question > h2").mouseover(function () {
-        $(this).animate({ letterSpacing: '2' }, 200);
-        $(this).animate({ letterSpacing: '0' }, 200);
-    });
-
     $("button").click(function () {
         $(".debut").hide();
         $(".barre_1").show();
@@ -46,7 +41,7 @@ $(document).ready(function () {
     function Loop_Question() {
         if (i < 5) {
             valeur = 100;
-            myInterval = setInterval(Sablier, 120); // 12 secondes
+            myInterval = setInterval(Sablier, 150); // 15 secondes
 
             $(".question").eq(i).delay(400).fadeIn();
             $(".barre_2").css("width", "+=20%");
@@ -54,18 +49,26 @@ $(document).ready(function () {
         }
 
         if (i == 5) {
-            $(".score").text("Score : " + score + " / 5");
+            $(".score").text("Ton score : " + score + " / 5");
             $(".barre_1").hide();
             $(".barre_2").hide();
             $(".sablier").hide();
         }
     }
 
+    $(".RV, .RF").mouseover(function () {
+        $(this).css("background", "grey");
+    })
+    .mouseout(function () {
+        $(this).css("background", "#313131");
+    });
+
     $(".RV, .RF").click(function () {
         $(this).css("background", "red");
         $(".question > .RV").eq(i).css("background", "rgb(0, 230, 0)");
 
-        $(this).parent().children().off("click");
+        $(this).parent().children().off("click").off("mouseover").off("mouseout");
+
         clearInterval(myInterval);
 
         setTimeout(function () {
