@@ -1,3 +1,9 @@
+/*====================== SECTION ACCUEIL =============================== */
+
+if (screen.width < 768) { 
+  document.getElementById("dev").innerHTML = "<br/>-<br/>";
+}
+
 /*====================== SECTION MENU =============================== */
 
 function Unzoom_Menu() {
@@ -6,19 +12,10 @@ function Unzoom_Menu() {
 
 /*====================== SECTION COMPETENCES ======================== */
 
-let rayon_sphere = 0;
-
-if (screen.width < 500) { // Responsivité de la sphere selon la largeur de l'écran
-  rayon_sphere = 150;
-}
-else {
-  rayon_sphere = 200;
-}
-
 TagCloud(
   ".sphere", // Emplacement de la sphere
   ['JavaScript','CSS','HTML','C','C++','SQL','jQuery','SCSS','Node.js','Angular','React','TypeScript','PHP','Responsive Design'], // Tableau de texte
-  { radius: rayon_sphere, keep: true } // Rayon de la sphere en px, Interaction avec le curseur
+  { radius: 200, keep: true } // Rayon de la sphere en px, Interaction avec le curseur
 );
 
 /*====================== SECTION REALISATIONS ======================== */

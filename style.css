@@ -19,6 +19,24 @@ h5 {
 	padding: 3em 0 2em 0;
 }
 
+.bouton {
+	font-size: 1em;
+	font-weight: 700;
+	color: #313131;
+	background-color: #fff;
+	border: .2em solid #1c98ed;
+	border-radius: 10px;
+	padding: .5em 2em;
+	text-align: center;
+	text-decoration: none;
+}
+
+.bouton:hover {
+	color: white;
+	background-color: #1c98ed;
+	cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
 	h5 {
 		padding: 2em 0 1em 0;
@@ -34,13 +52,13 @@ h5 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	text-align: center;
 }
 
 #accueil h1 {
 	font-size: 3em;
 	color: #fff;
-	margin: 0 auto .5em auto;
-	text-align: center;
+	margin: 0 .5em .5em .5em;
 	transition: 0.2s linear;
 }
 
@@ -53,7 +71,6 @@ h5 {
 	color: #fff;
 	letter-spacing: .2em;
 	padding: 1em;
-	text-align: center;
 	text-transform: uppercase;
 }
 
@@ -194,7 +211,7 @@ input[type="checkbox"] {
 	z-index: 0;
 	color: #313131;
 	font-weight: 500;
-	margin: auto;
+	margin-bottom: 2em;
 }
 
 #competences .tagcloud--item:hover {
@@ -211,7 +228,7 @@ input[type="checkbox"] {
 	}
 }
 
-/*====================== SECTION PARCOURS / EXPERIENCE ======================== */
+/*====================== SECTION PARCOURS / EXPERIENCES ======================== */
 
 #parcours .conteneur,
 #experience .conteneur {
@@ -397,24 +414,6 @@ input[type="checkbox"] {
 
 #realisations .slider .box .details p {
 	padding: 1em 0 2em 0;
-}
-
-#realisations a {
-	font-size: 1em;
-	font-weight: 700;
-	color: #313131;
-	background-color: #fff;
-	border: .2em solid #1c98ed;
-	border-radius: 10px;
-	padding: .5em 2em;
-	text-align: center;
-	text-decoration: none;
-}
-
-#realisations a:hover {
-	color: white;
-	background-color: #1c98ed;
-	cursor: pointer;
 }
 
 #realisations .slider .projet_1 {
